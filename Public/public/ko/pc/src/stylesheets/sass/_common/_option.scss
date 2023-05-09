@@ -1,13 +1,19 @@
 @charset "UTF-8";
 
 /* Font style setting */
-$gordita:"Gordita", Arial, Apple SD Gothic Neo, sans-serif;
+$OmNiGothic:"OmNiGothic", Arial, Apple SD Gothic Neo, sans-serif;
+$HighSummit:"HighSummit", Arial, Apple SD Gothic Neo, sans-serif;
+$BebasRegular:"BebasRegular", Arial, Apple SD Gothic Neo, sans-serif;
 
 /* Point color setting */
 $black:#000;
 $white:#fff;
 
-$red:#a50034;
+$red:#ef2d2d;
+$green:#3ca17e;
+
+$copyColor1:#22201c;
+$copyColor2:#888b84;
 
 $gray1:#242526;
 $gray2:#646566;
@@ -48,13 +54,13 @@ $btn-black:$black;
 /**
  * BASE SETTING
  */
-$base-font:$gordita;
+$base-font:$OmNiGothic;
 $base-font-size:20px;
 $base-font-color:$black;
 
 $letter-spacing:0;
 
-$light:300;
-$regular:400;
+$light:200;
+$regular:300;
 $medium:500;
-$bold:700;
+$bold:600;

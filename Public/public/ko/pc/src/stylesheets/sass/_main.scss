@@ -54,14 +54,133 @@
       background-color: blue;
    }
 }
-.index {
-   background-color: red;
-   section {
+
+main {
+   min-width: 1400px; width: 100%; height: 100%; background: url(./../../images/main/bg_deco.jpg) 0 repeat; background-size: initial;
+   section { width: 100%; }
+   #intro {
+      .first_motion {
+         background: url(./../../images/main/cloud_bg.png) 50% 50% no-repeat; overflow: hidden;
+         display: none;
+         .title_content { 
+            width: fit-content; position: relative; margin: 0 auto; padding: 130px 0 0;
+            &:after {
+               width: 100%; height: 100px; content: ""; display: block; position: absolute; top: 0; left: 0;
+               background: url(./../../imgaes/main/music_paper_deco.png) 50% 50% no-repeat;
+            }
+         }
+         .txt_wrap {
+            text-align: center;
+            h2 { 
+               display: block; 
+               img { margin: 20px 0 0; }
+            }
+            span.cursive_txt { display: block; padding: 20px 0 0; font-family: $HighSummit; font-size: 44px; color: #3a484c; line-height: 62px; }
+            .inner_cont {
+               width: fit-content; margin: 20px auto 0; padding: 17px 30px 13px;
+               border-top: 1px solid #afbfb3; border-bottom: 1px solid #afbfb3;
+               p { 
+                  color: #3c4a4e; font-size: 28px; font-weight: $light;
+                  // font-family: $HighSummit;
+               }
+            }
+         }
+         .img_wrap { 
+            position: relative; padding: 40px 0 0; z-index: 1;
+            &:after {
+               width: 1920px; height: 670px; content: ""; display: block; position: absolute; left: 50%; top: 50%;
+               z-index: -1; background: url(./../../images/main/music_paper_deco.png) 50% 50% no-repeat;
+               @include translate(-50%,-50%);
+            }
+            img { margin: 0 0 0 150px; }
+         }
+      }
+      .secound_motion {
+         overflow: hidden;
+         .sub_content {
+            width: fit-content; position: relative; margin: 0 auto; padding: 130px 0 140px; text-align: center;
+            > p { color: $copyColor2; font-size: 30px; font-weight: $regular; line-height: 42px; }
+            h2 {
+               padding: 100px 0 0; font-size: 44px; font-weight: $regular; font-style: italic;
+               strong { font-weight: $regular; color: $green; }
+            }
+            .img_wrap { 
+               position: relative; padding: 75px 0 0; z-index: 1;
+               &:after {
+                  width: 1920px; height: 737px; content: ""; display: block; position: absolute; left: 50%; top: 50%;
+                  margin: 135px 0 0; z-index: -1; background: url(./../../images/main/music_paper_deco2.png) 50% 50% no-repeat;
+                  @include translate(-50%,-50%);
+               }
+            }
+            .txt_wrap {
+               position: relative; padding: 75px 0 0; z-index: 1;
+               &:before {
+                  width: 414px; height: 302px; content: ""; display: block; position: absolute; left: 50%; top: 50%;
+                  margin: -230px 0 0 -781px; z-index: -1; background: url(./../../images/main/gitar_deco.png) 50% 50% no-repeat;
+                  @include translate(-50%,-50%);
+               }
+               &:after {
+                  width: 708px; height: 612px; content: ""; display: block; position: absolute; left: 50%; top: 50%;
+                  margin: 0 0 0 821px; z-index: -1; background: url(./../../images/main/tree_deco.png) 50% 50% no-repeat;
+                  @include translate(-50%,-50%);
+               }
+               p.main_copy {
+                  font-size: 30px; line-height: 42px; color: $copyColor1;
+                  strong { font-weight: $regular; color: $green; }
+               }
+               .sub_copy {
+                  padding: 25px 0 0;
+                  p {
+                     padding: 15px 0 0; font-size: 22px; line-height: 34px; font-weight: $light;
+                     &:first-child { padding:0; }
+                  }
+               }
+            }
+         }
+      }
+   }
+   #sec2 {
+      .img_wrap { 
+         width: fit-content; margin: 0 auto; 
+         @extend %clearfix;
+         &:before {
+            position: absolute; top: 50%; left: 50%; content: ""; display: block;
+            @include translate(-50%,-50%);
+         }
+         img {
+            display: block; float: left; margin: 0 0 0 20px;
+            &:first-of-type { margin: 0; }
+         }
+      }
+      .txt_wrap { 
+         width: fit-content; padding: 80px 0 0; margin: 0 auto; text-align: center;
+         p.main_copy { font-size: 22px; line-height: 34px; font-weight: $copyColor1; font-weight: $light; }
+         h2 { padding: 35px 0 0; font-size: 40px; line-height: 40px; font-weight: $regular; color: $copyColor1; }
+         p.sub_copy { 
+            padding: 35px 0 0; font-size: 22px; line-height: 34px; font-weight: $copyColor1; font-weight: $light;
+            strong { font-weight: $regular; color:$green; }
+         }
+      }
+   }
+   #sec3 {
+      .video_wrap { width: fit-content; margin: 0 auto; }
+      .txt_wrap { width: fit-content; margin: 0 auto; }
 
    }
-   .sec1 {
-      
+   #sec4 {
+      width: 100%; height: 1040px;
+      background: url(./../../images/main/last_section_bg.jpg) 50% 50% no-repeat;
+      .txt_wrap {
+         padding: 145px 0 0; text-align: center;
+         h2 { font-size: 40px; line-height: 52px; color: $copyColor1; font-weight: $regular; }
+         p { padding: 40px 0 0; font-size: 22px; line-height: 34px; color: $copyColor1; font-weight: $light; }
+      }
+      .btn_wrap {
+         padding:80px 0 0;
+         .donate_btn {
+            display: block; margin: 0 auto; padding: 25px 40px; background-color: $red; color: $white; font-size: 22px; font-weight: $light;
+            @include borderRadius(100px);
+         }
+      }
    }
-   .sec2 {}
-   .sec3 {}
 }

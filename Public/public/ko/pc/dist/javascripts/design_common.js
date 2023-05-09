@@ -83,8 +83,7 @@ function main() {
       });
 
    }
-
-   container.classList.contains('sub1') && sub1()
-   container.classList.contains('sub2') && sub2()
+   // container.classList.contains('sub1') && sub1()
+   // container.classList.contains('sub2') && sub2()
 
 }
