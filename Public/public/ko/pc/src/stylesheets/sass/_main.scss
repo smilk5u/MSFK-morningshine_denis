@@ -140,20 +140,29 @@ main {
       }
    }
    #sec2 {
+      overflow: hidden;
       .img_wrap { 
-         width: fit-content; margin: 0 auto; 
+         width: fit-content; margin: 0 auto; position: relative; padding: 95px 0 0; z-index: 1; 
          @extend %clearfix;
-         &:before {
-            position: absolute; top: 50%; left: 50%; content: ""; display: block;
-            @include translate(-50%,-50%);
-         }
          img {
             display: block; float: left; margin: 0 0 0 20px;
             &:first-of-type { margin: 0; }
          }
       }
       .txt_wrap { 
-         width: fit-content; padding: 80px 0 0; margin: 0 auto; text-align: center;
+         width: fit-content; position: relative; padding: 80px 0 160px; margin: 0 auto; text-align: center; 
+         &:before {
+            width: 729px; height: 928px; position: absolute; top: 50%; left: 50%; content: ""; display: block;
+            margin: -221px 0 0 -869px;
+            @include translate(-50%,-50%); 
+            background: url(./../../images/main/tree_deco2.png) 50% 50% no-repeat;
+         }
+         &:after {
+            width: 632px; height: 300px; position: absolute; top: 50%; left: 50%; content: ""; display: block;
+            margin: -112px 0 0 653px;
+            @include translate(-50%,-50%);
+            background: url(./../../images/main/music_paper_deco4.png) 50% 50% no-repeat;
+         }
          p.main_copy { font-size: 22px; line-height: 34px; font-weight: $copyColor1; font-weight: $light; }
          h2 { padding: 35px 0 0; font-size: 40px; line-height: 40px; font-weight: $regular; color: $copyColor1; }
          p.sub_copy { 
