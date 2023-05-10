@@ -57,8 +57,8 @@ function main() {
    function SecAction() {
       for (var i = 0; i < aniSection.length; i++) {
          if (windowScrollTop > offSetTop[i]) {
-            TweenMax.staggerTo(SectionAniContent[i].find('.ani-content'), .6, { opacity: 1, y: -50, }, .2);
-            SectionAniContent[i].addClass('end');
+            TweenMax.staggerTo(SectionAniContent[i].find('.ani-content'), .6, { opacity: 1, transform: 'translate3d(0,0,0)' }, .2);
+            SectionAniContent[i].addClass('end'); 
          }
       } 
    }

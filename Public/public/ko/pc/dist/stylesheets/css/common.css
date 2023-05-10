@@ -215,9 +215,9 @@ main { min-width: 1400px; width: 100%; height: 100%; background: url(./../../ima
 
 main section { width: 100%; }
 
-main #intro { height: 2483px; background: url(./../../images/main/cloud_bg.png) 50% 0 no-repeat; }
+main #intro { height: 2370px; background: url(./../../images/main/cloud_bg.png) 50% 0 no-repeat; }
 
-main #intro .title_content { position: relative; margin: 0 auto; padding: 125px 0 0; }
+main #intro .title_content { position: relative; margin: 0 auto; padding: 125px 0 0; z-index: 2; }
 
 main #intro .title_content .txt_wrap { text-align: center; }
 
@@ -245,31 +245,31 @@ main #intro .pin_contain .intro_img_wrap img { margin: 0 0 0 150px; }
 
 main #intro .pin_contain .sub_content { width: fit-content; margin: 0 auto; padding: 130px 0 140px; text-align: center; top: 500px; opacity: 0; position: absolute; left: 50%; -webkit-transform: translate(-50%, 0) scale(0.8); -moz-transform: translate(-50%, 0) scale(0.8); -ms-transform: translate(-50%, 0) scale(0.8); -o-transform: translate(-50%, 0) scale(0.8); transform: translate(-50%, 0) scale(0.8); }
 
-main #intro .pin_contain .sub_content > p { color: #888b84; font-size: 30px; font-weight: 300; line-height: 42px; }
+main #intro .pin_contain .sub_content > p { color: #888b84; font-size: 30px; font-weight: 300; line-height: 42px; letter-spacing: -1.5px; }
 
-main #intro .pin_contain .sub_content h2 { padding: 100px 0 0; font-size: 44px; font-weight: 300; font-style: italic; letter-spacing: -2px; }
+main #intro .pin_contain .sub_content h2 { padding: 100px 0 0; font-size: 44px; font-weight: 300; font-style: italic; letter-spacing: -2.2px; }
 
 main #intro .pin_contain .sub_content h2 strong { font-weight: 300; color: #3ca17e; }
 
 main #intro .pin_contain .sub_content .img_wrap { position: relative; padding: 75px 0 0; z-index: 1; }
 
-main #intro .pin_contain .sub_content .txt_wrap { position: relative; padding: 75px 0 0; z-index: 1; }
+main #intro .pin_contain .sub_content .txt_wrap { position: relative; padding: 70px 0 0; z-index: 1; }
 
-main #intro .pin_contain .sub_content .txt_wrap p.main_copy { font-size: 30px; line-height: 42px; color: #22201c; font-weight: 300; -webkit-transform: translate(0, 30px); -moz-transform: translate(0, 30px); -ms-transform: translate(0, 30px); -o-transform: translate(0, 30px); transform: translate(0, 30px); }
+main #intro .pin_contain .sub_content .txt_wrap p.main_copy { font-size: 30px; line-height: 42px; color: #22201c; font-weight: 300; opacity: 0; letter-spacing: -1.5px; -webkit-transform: translate(0, 30px); -moz-transform: translate(0, 30px); -ms-transform: translate(0, 30px); -o-transform: translate(0, 30px); transform: translate(0, 30px); }
 
 main #intro .pin_contain .sub_content .txt_wrap p.main_copy strong { font-weight: 300; color: #3ca17e; }
 
-main #intro .pin_contain .sub_content .txt_wrap .sub_copy { padding: 25px 0 0; -webkit-transform: translate(0, 30px); -moz-transform: translate(0, 30px); -ms-transform: translate(0, 30px); -o-transform: translate(0, 30px); transform: translate(0, 30px); }
+main #intro .pin_contain .sub_content .txt_wrap .sub_copy { padding: 25px 0 0; opacity: 0; -webkit-transform: translate(0, 30px); -moz-transform: translate(0, 30px); -ms-transform: translate(0, 30px); -o-transform: translate(0, 30px); transform: translate(0, 30px); }
 
-main #intro .pin_contain .sub_content .txt_wrap .sub_copy p { padding: 15px 0 0; font-size: 22px; line-height: 34px; font-weight: 200; }
+main #intro .pin_contain .sub_content .txt_wrap .sub_copy p { padding: 15px 0 0; font-size: 22px; line-height: 34px; font-weight: 200; letter-spacing: -1px; }
 
 main #intro .pin_contain .sub_content .txt_wrap .sub_copy p:first-child { padding: 0; }
 
-main #intro .pin_contain .sub_content .deco_wrap { width: 1920px; height: 737px; position: absolute; left: 50%; top: 417px; background: url(./../../images/main/music_paper_deco2.png) 50% 50% no-repeat; -webkit-transform: translate(-50%, 0); -moz-transform: translate(-50%, 0); -ms-transform: translate(-50%, 0); -o-transform: translate(-50%, 0); transform: translate(-50%, 0); }
+main #intro .pin_contain .sub_content .deco_wrap { width: 1920px; height: 737px; position: absolute; left: 50%; top: 400px; background: url(./../../images/main/music_paper_deco2.png) 50% 50% no-repeat; -webkit-transform: translate(-50%, 0); -moz-transform: translate(-50%, 0); -ms-transform: translate(-50%, 0); -o-transform: translate(-50%, 0); transform: translate(-50%, 0); }
 
 main #intro .pin_contain .sub_content .deco_wrap .element_1 { width: 339px; height: 230px; position: absolute; left: -15px; top: 440px; }
 
-main #intro .pin_contain .sub_content .deco_wrap .element_2 { width: 708px; height: 612px; position: absolute; right: -250px; top: 390px; }
+main #intro .pin_contain .sub_content .deco_wrap .element_2 { width: 708px; height: 612px; position: absolute; right: -230px; top: 390px; }
 
 main #intro .second_motion { position: absolute; top: 1000px; left: 50%; overflow: hidden; opacity: 0; -webkit-transform: translate(-50%, 0); -moz-transform: translate(-50%, 0); -ms-transform: translate(-50%, 0); -o-transform: translate(-50%, 0); transform: translate(-50%, 0); }
 
@@ -281,13 +281,13 @@ main #sec2 .img_wrap img { display: block; float: left; margin: 0 0 0 20px; }
 
 main #sec2 .img_wrap img:first-of-type { margin: 0; }
 
-main #sec2 .txt_wrap { width: fit-content; padding: 80px 0 160px; margin: 0 auto; text-align: center; }
+main #sec2 .txt_wrap { width: fit-content; padding: 75px 0 160px; margin: 0 auto; text-align: center; }
 
-main #sec2 .txt_wrap p.main_copy { font-size: 22px; line-height: 34px; font-weight: #22201c; font-weight: 200; -webkit-transform: translate(0, 30px); -moz-transform: translate(0, 30px); -ms-transform: translate(0, 30px); -o-transform: translate(0, 30px); transform: translate(0, 30px); }
+main #sec2 .txt_wrap p.main_copy { font-size: 22px; line-height: 34px; font-weight: #22201c; font-weight: 200; opacity: 0; letter-spacing: -1px; -webkit-transform: translate(0, 30px); -moz-transform: translate(0, 30px); -ms-transform: translate(0, 30px); -o-transform: translate(0, 30px); transform: translate(0, 30px); }
 
-main #sec2 .txt_wrap h2 { padding: 35px 0 0; font-size: 40px; line-height: 40px; font-weight: 300; color: #22201c; -webkit-transform: translate(0, 30px); -moz-transform: translate(0, 30px); -ms-transform: translate(0, 30px); -o-transform: translate(0, 30px); transform: translate(0, 30px); }
+main #sec2 .txt_wrap h2 { padding: 30px 0 0; font-size: 40px; line-height: 40px; font-weight: 300; color: #22201c; opacity: 0; letter-spacing: -2px; -webkit-transform: translate(0, 30px); -moz-transform: translate(0, 30px); -ms-transform: translate(0, 30px); -o-transform: translate(0, 30px); transform: translate(0, 30px); }
 
-main #sec2 .txt_wrap p.sub_copy { padding: 35px 0 0; font-size: 22px; line-height: 34px; font-weight: #22201c; font-weight: 200; -webkit-transform: translate(0, 30px); -moz-transform: translate(0, 30px); -ms-transform: translate(0, 30px); -o-transform: translate(0, 30px); transform: translate(0, 30px); }
+main #sec2 .txt_wrap p.sub_copy { padding: 30px 0 0; font-size: 22px; line-height: 34px; font-weight: #22201c; font-weight: 200; opacity: 0; letter-spacing: -1px; -webkit-transform: translate(0, 30px); -moz-transform: translate(0, 30px); -ms-transform: translate(0, 30px); -o-transform: translate(0, 30px); transform: translate(0, 30px); }
 
 main #sec2 .txt_wrap p.sub_copy strong { font-weight: 300; color: #3ca17e; }
 
@@ -305,13 +305,13 @@ main #sec3 .video_wrap:after { width: 1920px; height: 620px; content: ""; displa
 
 main #sec3 .txt_wrap { width: fit-content; margin: 0 auto; padding: 130px 0 140px; text-align: center; }
 
-main #sec3 .txt_wrap h2 { font-size: 30px; color: #22201c; font-weight: 300; -webkit-transform: translate(0, 30px); -moz-transform: translate(0, 30px); -ms-transform: translate(0, 30px); -o-transform: translate(0, 30px); transform: translate(0, 30px); }
+main #sec3 .txt_wrap h2 { font-size: 30px; color: #22201c; font-weight: 300; opacity: 0; -webkit-transform: translate(0, 30px); -moz-transform: translate(0, 30px); -ms-transform: translate(0, 30px); -o-transform: translate(0, 30px); transform: translate(0, 30px); }
 
-main #sec3 .txt_wrap p { padding: 25px 0 0; font-size: 22px; color: #22201c; font-weight: 200; line-height: 34px; -webkit-transform: translate(0, 30px); -moz-transform: translate(0, 30px); -ms-transform: translate(0, 30px); -o-transform: translate(0, 30px); transform: translate(0, 30px); }
+main #sec3 .txt_wrap p { padding: 25px 0 0; font-size: 22px; color: #22201c; font-weight: 200; line-height: 34px; opacity: 0; -webkit-transform: translate(0, 30px); -moz-transform: translate(0, 30px); -ms-transform: translate(0, 30px); -o-transform: translate(0, 30px); transform: translate(0, 30px); }
 
 main #sec3 .txt_wrap p > strong { color: #3ca17e; font-weight: 300; }
 
-main #sec3 .txt_wrap strong.title_txt { position: relative; padding: 150px 0 0; display: block; color: #888b84; font-weight: 300; font-size: 30px; line-height: 44px; -webkit-transform: translate(0, 30px); -moz-transform: translate(0, 30px); -ms-transform: translate(0, 30px); -o-transform: translate(0, 30px); transform: translate(0, 30px); }
+main #sec3 .txt_wrap strong.title_txt { position: relative; padding: 150px 0 0; display: block; color: #888b84; font-weight: 300; font-size: 30px; line-height: 44px; opacity: 0; -webkit-transform: translate(0, 30px); -moz-transform: translate(0, 30px); -ms-transform: translate(0, 30px); -o-transform: translate(0, 30px); transform: translate(0, 30px); }
 
 main #sec3 .txt_wrap strong.title_txt:before { content: "“"; display: block; position: absolute; left: 50%; top: 120px; font-size: 70px; font-weight: 300; }
 
@@ -323,13 +323,15 @@ main #sec4 { width: 100%; height: 1040px; background: url(./../../images/main/la
 
 main #sec4 .txt_wrap { padding: 145px 0 0; text-align: center; }
 
-main #sec4 .txt_wrap h2 { font-size: 40px; line-height: 52px; color: #22201c; font-weight: 300; -webkit-transform: translate(0, 30px); -moz-transform: translate(0, 30px); -ms-transform: translate(0, 30px); -o-transform: translate(0, 30px); transform: translate(0, 30px); }
+main #sec4 .txt_wrap h2 { font-size: 40px; line-height: 52px; color: #22201c; font-weight: 300; opacity: 0; -webkit-transform: translate(0, 30px); -moz-transform: translate(0, 30px); -ms-transform: translate(0, 30px); -o-transform: translate(0, 30px); transform: translate(0, 30px); }
 
-main #sec4 .txt_wrap p { padding: 40px 0 0; font-size: 22px; line-height: 34px; color: #22201c; font-weight: 200; -webkit-transform: translate(0, 30px); -moz-transform: translate(0, 30px); -ms-transform: translate(0, 30px); -o-transform: translate(0, 30px); transform: translate(0, 30px); }
+main #sec4 .txt_wrap p { padding: 40px 0 0; font-size: 22px; line-height: 34px; color: #22201c; font-weight: 200; opacity: 0; -webkit-transform: translate(0, 30px); -moz-transform: translate(0, 30px); -ms-transform: translate(0, 30px); -o-transform: translate(0, 30px); transform: translate(0, 30px); }
 
-main #sec4 .btn_wrap { padding: 80px 0 0; -webkit-transform: translate(0, 30px); -moz-transform: translate(0, 30px); -ms-transform: translate(0, 30px); -o-transform: translate(0, 30px); transform: translate(0, 30px); }
+main #sec4 .btn_wrap { padding: 80px 0 0; opacity: 0; -webkit-transform: translate(0, 30px); -moz-transform: translate(0, 30px); -ms-transform: translate(0, 30px); -o-transform: translate(0, 30px); transform: translate(0, 30px); }
 
-main #sec4 .btn_wrap .donate_btn { display: block; margin: 0 auto; padding: 25px 40px; background-color: #ef2d2d; color: #fff; font-size: 22px; font-weight: 200; -webkit-border-radius: 100px; -moz-border-radius: 100px; border-radius: 100px; }
+main #sec4 .btn_wrap .donate_btn { width: fit-content; display: block; margin: 0 auto; padding: 31px 80px 27px; background-color: #ef2d2d; color: #fff; font-size: 24px; font-weight: 300; border: 2px solid transparent; -webkit-border-radius: 100px; -moz-border-radius: 100px; border-radius: 100px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-transition: all 0.2s ease; -moz-transition: all 0.2s ease; -o-transition: all 0.2s ease; -ms-transition: all 0.2s ease; }
+
+main #sec4 .btn_wrap .donate_btn:hover { color: #ef2d2d; background-color: rgba(255, 255, 255, 0.6); border-color: #ef2d2d; }
 
 /* common css */
 ::selection { background: #fff; color: #000; text-shadow: none; }
