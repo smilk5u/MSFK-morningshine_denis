@@ -5,12 +5,12 @@ header {
 	@include boxSizing;
 	@extend %clearfix;
 	#logo {
-		width: 208px; height: 64px; position: absolute; top: 28px; left: 30px;
+		width: 208px; height: 64px; position: absolute; top: 30px; left: 80px;
 		a { width: 100%; height: 100%; display: block; position: relative; }
 		img { width: 100%; position: absolute; top: 0; left: 0; }
 	}
 	.donate_btn {
-		position:absolute; right:40px; top:33px;
+		position: absolute; right: 80px; top: 40px;
 		a {
 			width: 200px; padding: 19px 0 17px; font-size: 18px; color: $white; display: block; line-height: 20px;  letter-spacing: 0;
 			font-weight: $light; background-color: $red; text-align: center; border: 2px solid transparent;

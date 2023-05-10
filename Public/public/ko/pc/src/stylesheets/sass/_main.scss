@@ -1,74 +1,114 @@
 @charset "UTF-8";
-.top { position: fixed; left: 0; bottom: 0; font-size: 20px; font-weight: bold; }
-.sub1 {
-   section {
-      height: 100vh; padding: 200px 0 0; border-bottom: 1px solid black;
-      @include boxSizing;
-   }
-   .sec1 {
-      width: 100%; 
-      .box {
-         width: 600px; height: 600px; background-color: pink; border: 10px solid black;
-         position: absolute; left: 0; top:0; bottom:0; right:0; margin: auto;
-         // display: none;
-         // opacity: 0;
-      }
-      .box2 {
-         width: 600px; height: 600px; background-color: rgb(145, 216, 30); border: 10px solid black;
-         font-size: 100px;
-         position: absolute; left: 0; top:0; bottom:0; right:0; margin: auto;
-         opacity: 0;
-         display: none;
-         @include scale(0);
-      }
-   }
-   .sec2 {
-      width: 100%; height:100vh;
-      background-color: blue;
-   }
-}
-.sub2 {
-   section {
-      height: 100vh; padding: 200px 0 0; border-bottom: 1px solid black;
-      @include boxSizing;
-   }
-   .sec1 {
-      width: 100%; 
-      .box {
-         width: 600px; height: 600px; background-color: pink; border: 10px solid black;
-         position: absolute; left: 0; top:0; bottom:0; right:0; margin: auto;
-         // display: none;
-         // opacity: 0;
-      }
-      .box2 {
-         width: 600px; height: 600px; background-color: rgb(145, 216, 30); border: 10px solid black;
-         font-size: 100px;
-         position: absolute; left: 0; top:0; bottom:0; right:0; margin: auto;
-         opacity: 0;
-         display: none;
-         @include scale(0);
-      }
-   }
-   .sec2 {
-      width: 100%; height:100vh;
-      background-color: blue;
-   }
-}
-
+.top { position: fixed; left: 0; bottom: 0; font-size: 20px; font-weight: bold; z-index: 99999; }
 main {
-   min-width: 1400px; width: 100%; height: 100%; background: url(./../../images/main/bg_deco.jpg) 0 repeat; background-size: initial;
+   min-width: 1400px; width: 100%; height: 100%; background: url(./../../images/main/bg_deco.jpg) 0 repeat;
+   background-size: initial; overflow: hidden;
    section { width: 100%; }
    #intro {
-      .first_motion {
-         background: url(./../../images/main/cloud_bg.png) 50% 50% no-repeat; overflow: hidden;
-         display: none;
-         .title_content { 
-            width: fit-content; position: relative; margin: 0 auto; padding: 130px 0 0;
-            &:after {
-               width: 100%; height: 100px; content: ""; display: block; position: absolute; top: 0; left: 0;
-               background: url(./../../imgaes/main/music_paper_deco.png) 50% 50% no-repeat;
+      height: 2483px; background: url(./../../images/main/cloud_bg.png) 50% 0 no-repeat;
+      .title_content { 
+         position: relative; margin: 0 auto; padding: 125px 0 0; 
+         .txt_wrap {
+            text-align: center;
+            img.intro_deco { 
+               opacity: 0; 
+               @include translate(0,60px); 
+            }
+            h2 { 
+               display: block; opacity: 0;
+               span { position: absolute; text-indent: -999px; opacity: 0; }
+               img { margin: 20px 0 0; }
+               @include translate(0,60px); 
+            }
+            span.cursive_txt { 
+               display: block; padding: 20px 0 0; font-family: $HighSummit; font-size: 44px; color: #3a484c; 
+               line-height: 62px; opacity: 0;
+               @include translate(0,60px); 
+            }
+            .inner_cont {
+               width: fit-content; margin: 20px auto 0; padding: 17px 30px 13px; border-top: 1px solid #afbfb3;
+                border-bottom: 1px solid #afbfb3; opacity: 0;
+               @include translate(0,60px); 
+               p { color: #3c4a4e; font-size: 28px; font-weight: $light; letter-spacing: 1.5px; }
             }
          }
+      }
+      .pin_contain {
+         height: 100vh; position: relative;
+         .intro_img_wrap { 
+            width: fit-content; position: relative; z-index: 1; margin: -60px auto 0; opacity: 0;
+            @include translate(0,30px); 
+            &:after {
+               width: 1920px; height: 866px; content: ""; display: block; position: absolute; left: 50%; top: 50%;
+               z-index: -1; background: url(./../../images/main/music_paper_deco.png) 50% 50% no-repeat;
+               @include translate(-50%,-50%);
+            }
+            img { margin: 0 0 0 150px; }
+         }
+         .sub_content {
+            width: fit-content; margin: 0 auto; padding: 130px 0 140px; text-align: center;
+            top: 500px; opacity: 0;
+
+            position: absolute;
+            left: 50%;
+            @include transform(translate(-50%,0) scale(.8));
+
+            // position: relative;
+            // @include scale(.8);
+            > p { color: $copyColor2; font-size: 30px; font-weight: $regular; line-height: 42px; }
+            h2 {
+               padding: 100px 0 0; font-size: 44px; font-weight: $regular; font-style: italic; letter-spacing: -2px;
+               strong { font-weight: $regular; color: $green; }
+            }
+            .img_wrap { 
+               position: relative; padding: 75px 0 0; z-index: 1;
+            }
+            .txt_wrap {
+               position: relative; padding: 75px 0 0; z-index: 1;
+               p.main_copy {
+                  font-size: 30px; line-height: 42px; color: $copyColor1; font-weight: $regular;
+                  @include translate(0,30px); 
+                  strong { font-weight: $regular; color: $green; }
+               }
+               .sub_copy {
+                  padding: 25px 0 0;
+                  @include translate(0,30px); 
+                  p {
+                     padding: 15px 0 0; font-size: 22px; line-height: 34px; font-weight: $light;
+                     &:first-child { padding:0; }
+                  }
+               }
+            }
+            .deco_wrap {
+               width: 1920px; height: 737px; position: absolute; left: 50%; top: 417px;
+               background: url(./../../images/main/music_paper_deco2.png) 50% 50% no-repeat;
+               @include translate(-50%,0); 
+               .element_1 {
+                  width: 339px; height: 230px; position: absolute; left: -15px; top: 440px;
+                  .music_note {
+                     img {}
+                  }
+               }
+               .element_2 {
+                  width: 708px; height: 612px; position: absolute; right: -250px; top: 390px;
+                  .music_note {
+                     img {}
+                  }
+               }
+            }
+         }
+      }
+
+      .second_motion {
+         position: absolute; top: 1000px; left: 50%; overflow: hidden; opacity: 0;
+         @include translate(-50%,0);
+      }
+   }
+   /* #intro {
+      .first_motion {
+         background: url(./../../images/main/cloud_bg.png) 50% 0 no-repeat; 
+         // opacity: 0;
+         .title_content { width: fit-content; position: relative; margin: 0 auto; padding: 130px 0 0; }
          .txt_wrap {
             text-align: center;
             h2 { 
@@ -79,10 +119,7 @@ main {
             .inner_cont {
                width: fit-content; margin: 20px auto 0; padding: 17px 30px 13px;
                border-top: 1px solid #afbfb3; border-bottom: 1px solid #afbfb3;
-               p { 
-                  color: #3c4a4e; font-size: 28px; font-weight: $light;
-                  // font-family: $HighSummit;
-               }
+               p { color: #3c4a4e; font-size: 28px; font-weight: $light; }
             }
          }
          .img_wrap { 
@@ -95,37 +132,23 @@ main {
             img { margin: 0 0 0 150px; }
          }
       }
-      .secound_motion {
-         overflow: hidden;
+      .second_motion {
+         position: absolute; top: 1000px; left: 50%; overflow: hidden; opacity: 0;
+         @include translate(-50%,0);
          .sub_content {
             width: fit-content; position: relative; margin: 0 auto; padding: 130px 0 140px; text-align: center;
             > p { color: $copyColor2; font-size: 30px; font-weight: $regular; line-height: 42px; }
             h2 {
-               padding: 100px 0 0; font-size: 44px; font-weight: $regular; font-style: italic;
+               padding: 100px 0 0; font-size: 44px; font-weight: $regular; font-style: italic; letter-spacing: -2px;
                strong { font-weight: $regular; color: $green; }
             }
             .img_wrap { 
                position: relative; padding: 75px 0 0; z-index: 1;
-               &:after {
-                  width: 1920px; height: 737px; content: ""; display: block; position: absolute; left: 50%; top: 50%;
-                  margin: 135px 0 0; z-index: -1; background: url(./../../images/main/music_paper_deco2.png) 50% 50% no-repeat;
-                  @include translate(-50%,-50%);
-               }
             }
             .txt_wrap {
                position: relative; padding: 75px 0 0; z-index: 1;
-               &:before {
-                  width: 414px; height: 302px; content: ""; display: block; position: absolute; left: 50%; top: 50%;
-                  margin: -230px 0 0 -781px; z-index: -1; background: url(./../../images/main/gitar_deco.png) 50% 50% no-repeat;
-                  @include translate(-50%,-50%);
-               }
-               &:after {
-                  width: 708px; height: 612px; content: ""; display: block; position: absolute; left: 50%; top: 50%;
-                  margin: 0 0 0 821px; z-index: -1; background: url(./../../images/main/tree_deco.png) 50% 50% no-repeat;
-                  @include translate(-50%,-50%);
-               }
                p.main_copy {
-                  font-size: 30px; line-height: 42px; color: $copyColor1;
+                  font-size: 30px; line-height: 42px; color: $copyColor1; font-weight: $regular;
                   strong { font-weight: $regular; color: $green; }
                }
                .sub_copy {
@@ -136,13 +159,30 @@ main {
                   }
                }
             }
+            .deco_wrap {
+               width: 1920px; height: 737px; position: absolute; left: 50%; top: 417px;
+               background: url(./../../images/main/music_paper_deco2.png) 50% 50% no-repeat;
+               @include translate(-50%,0); 
+               .element_1 {
+                  width: 339px; height: 230px; position: absolute; left: -15px; top: 440px;
+                  .music_note {
+                     img {}
+                  }
+               }
+               .element_2 {
+                  width: 708px; height: 612px; position: absolute; right: -250px; top: 390px;
+                  .music_note {
+                     img {}
+                  }
+               }
+            }
          }
       }
-   }
+   } */
    #sec2 {
-      overflow: hidden;
+      .inner_contain { width: 1440px; position: relative; margin: 0 auto; }
       .img_wrap { 
-         width: fit-content; margin: 0 auto; position: relative; padding: 95px 0 0; z-index: 1; 
+         width: fit-content; margin: 0 auto; padding: 95px 0 0; position: relative; z-index: 1; 
          @extend %clearfix;
          img {
             display: block; float: left; margin: 0 0 0 20px;
@@ -150,42 +190,92 @@ main {
          }
       }
       .txt_wrap { 
-         width: fit-content; position: relative; padding: 80px 0 160px; margin: 0 auto; text-align: center; 
-         &:before {
-            width: 729px; height: 928px; position: absolute; top: 50%; left: 50%; content: ""; display: block;
-            margin: -221px 0 0 -869px;
-            @include translate(-50%,-50%); 
-            background: url(./../../images/main/tree_deco2.png) 50% 50% no-repeat;
+         width: fit-content; padding: 80px 0 160px; margin: 0 auto; text-align: center; 
+         p.main_copy { 
+            font-size: 22px; line-height: 34px; font-weight: $copyColor1; font-weight: $light; 
+            @include translate(0,30px); 
          }
-         &:after {
-            width: 632px; height: 300px; position: absolute; top: 50%; left: 50%; content: ""; display: block;
-            margin: -112px 0 0 653px;
-            @include translate(-50%,-50%);
-            background: url(./../../images/main/music_paper_deco4.png) 50% 50% no-repeat;
+         h2 { 
+            padding: 35px 0 0; font-size: 40px; line-height: 40px; font-weight: $regular; color: $copyColor1; 
+            @include translate(0,30px); 
          }
-         p.main_copy { font-size: 22px; line-height: 34px; font-weight: $copyColor1; font-weight: $light; }
-         h2 { padding: 35px 0 0; font-size: 40px; line-height: 40px; font-weight: $regular; color: $copyColor1; }
          p.sub_copy { 
             padding: 35px 0 0; font-size: 22px; line-height: 34px; font-weight: $copyColor1; font-weight: $light;
+            @include translate(0,30px); 
             strong { font-weight: $regular; color:$green; }
+         }
+      }
+      .deco_element_1 {
+         width: 729px; height: 958px; position: absolute; left: -530px; top: -105px;
+         .music_note {
+            img {}
+         }
+      }
+      .deco_element_2 {
+         width: 1056px; height: 875px; position: absolute; right: -605px; top: 285px;
+         .music_note {
+            img {}
          }
       }
    }
    #sec3 {
-      .video_wrap { width: fit-content; margin: 0 auto; }
-      .txt_wrap { width: fit-content; margin: 0 auto; }
-
+      .inner_contain { width: 1440px; position: relative; margin: 0 auto; }
+      .video_wrap { 
+         width: 1030px; height: 580px; margin: 0 auto; padding: 80px 0 0; position: relative; z-index: 1;
+         iframe { width: 100%; height: 100%; background-color: #222; }
+         &:after {
+            width: 1920px; height: 620px; content: ""; display: block; position: absolute; top: 0; left: 50%;
+            background: url(./../../images/main/music_paper_deco3.png) 50% 50% no-repeat; z-index: -1;
+            @include translate(-50%,0);
+         }
+      }
+      .txt_wrap {
+         width: fit-content; margin: 0 auto; padding: 130px 0 140px; text-align: center;
+         h2 { 
+            font-size: 30px; color:$copyColor1; font-weight: $regular; 
+            @include translate(0,30px); 
+         }
+         p {
+            padding: 25px 0 0 ; font-size: 22px; color: $copyColor1; font-weight: $light; line-height: 34px;
+            @include translate(0,30px); 
+            > strong { color: $green; font-weight: $regular; }
+         }
+         strong.title_txt {
+            position: relative; padding: 150px 0 0; display: block; color: #888b84; font-weight: $regular; font-size: 30px; line-height: 44px;
+            @include translate(0,30px); 
+            &:before { content: "“"; display: block; position: absolute; left: 50%; top: 120px; font-size: 70px; font-weight: $regular; }
+         }
+      }
+      .deco_element_1 {
+         width: 616px; height: 935px; position: absolute; left: -241px; bottom: 0;
+         .music_note {
+            img {}
+         }
+      }
+      .deco_element_2 {
+         width: 536px; height: 481px; position: absolute; right: -247px; bottom: 0;
+         .music_note {
+            img {}
+         }
+      }
    }
    #sec4 {
       width: 100%; height: 1040px;
       background: url(./../../images/main/last_section_bg.jpg) 50% 50% no-repeat;
       .txt_wrap {
          padding: 145px 0 0; text-align: center;
-         h2 { font-size: 40px; line-height: 52px; color: $copyColor1; font-weight: $regular; }
-         p { padding: 40px 0 0; font-size: 22px; line-height: 34px; color: $copyColor1; font-weight: $light; }
+         h2 { 
+            font-size: 40px; line-height: 52px; color: $copyColor1; font-weight: $regular; 
+            @include translate(0,30px); 
+         }
+         p { 
+            padding: 40px 0 0; font-size: 22px; line-height: 34px; color: $copyColor1; font-weight: $light; 
+            @include translate(0,30px); 
+         }
       }
       .btn_wrap {
          padding:80px 0 0;
+         @include translate(0,30px); 
          .donate_btn {
             display: block; margin: 0 auto; padding: 25px 40px; background-color: $red; color: $white; font-size: 22px; font-weight: $light;
             @include borderRadius(100px);

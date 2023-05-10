@@ -1,6 +1,63 @@
-@@include("./include/header.html") <!-- container -->
+@@include("./include/header.html")
+<script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
+<!-- container -->
 <main>
    <section id="intro">
+      <div class="title_content">
+         <div class="txt_wrap">
+            <img class="intro_deco" src="./images/main/intro_deco.png" alt="데코이미지1">
+            <h2>
+               <span>MORNING SHINE</span>
+               <img src="./images/main/intro_title.png" alt="MORNING SHINE">
+            </h2>
+            <span class="cursive_txt">Denis Sungho</span>
+            <div class="inner_cont">
+               <p>국경없는의사회 X 드니성호 : 새벽을 밝히는 빛</p>
+            </div>
+         </div>
+      </div>
+      <div class="pin_contain">
+         <!-- <div class="box">사람 이미지</div> -->
+         <!-- <div class="box2">텍스트</div> -->
+         <div class="intro_img_wrap">
+            <img src="./images/main/intro_people.png" alt="드니성호 활동가의 기타치는 모습">
+         </div>
+         <div class="sub_content">
+            <p>안녕하세요, 국경없는의사회 컴패니언으로 함께하게 된 <br>기타리스트 드니성호입니다.</p>
+            <h2>여러분에게 <strong>‘삶의 의미’</strong>란 무엇인가요?</h2>
+            <div class="img_wrap">
+               <img src="./images/main/people_of_spirit_img.jpg" alt="">
+            </div>
+            <div class="txt_wrap ani-section">
+               <p class="main_copy ani-content">저는 <strong>‘나눔’</strong>에 진짜 의미가 있다고 생각합니다. <br>자신만을 위해 살아가는 것은 아무 의미가 없어요.</p>
+               <div class="sub_copy ani-content">
+                  <p>균형있는 삶을 위해 나눔을 실천해 온 저는, <br>제가 가진 재능을 다른 사람들과 더 적극적으로 나누기 위해 ‘컴패니언’이 되었습니다.</p>
+                  <p>음악가로서 구호 현장의 사람들이 제 음악으로 잠시나마 마음의 평화를 되찾길 바랐고, <br>컴패니언으로 제 음악을 통해 도움이 필요한 현장의 상황을 알리고 <br>더 많은 사람들이 관심을 갖길 바랐습니다.</p>
+               </div>
+            </div>
+            <div class="deco_wrap">
+               <div class="element_1">
+                  <img class="book_deco" src="./images/main/book_deco.png" alt="">
+                  <div class="music_note">
+                     <img src="" alt="">
+                     <img src="" alt="">
+                  </div>
+               </div>
+               <div class="element_2">
+                  <img class="book_deco" src="./images/main/tree_deco.png" alt="">
+                  <div class="music_note">
+                     <img src="" alt="">
+                     <img src="" alt="">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- <section id="intro">
       <div class="first_motion">
          <div class="title_content">
             <div class="txt_wrap">
@@ -13,12 +70,14 @@
                   <p>국경없는의사회 X 드니성호 : 새벽을 밝히는 빛</p>
                </div>
             </div>
-            <div class="img_wrap">
-               <img src="./images/main/intro_people.png" alt="">
+            <div class="pin_contain">
+               <div class="img_wrap">
+                  <img src="./images/main/intro_people.png" alt="드니성호 활동가의 기타치는 모습">
+               </div>
             </div>
          </div>
       </div>
-      <div class="secound_motion">
+      <div class="second_motion">
          <div class="sub_content">
             <p>안녕하세요, 국경없는의사회 컴패니언으로 함께하게 된 <br>기타리스트 드니성호입니다.</p>
             <h2>여러분에게 <strong>‘삶의 의미’</strong>란 무엇인가요?</h2>
@@ -32,39 +91,86 @@
                   <p>음악가로서 구호 현장의 사람들이 제 음악으로 잠시나마 마음의 평화를 되찾길 바랐고, <br>컴패니언으로 제 음악을 통해 도움이 필요한 현장의 상황을 알리고 <br>더 많은 사람들이 관심을 갖길 바랐습니다.</p>
                </div>
             </div>
+            <div class="deco_wrap">
+               <div class="element_1">
+                  <img class="book_deco" src="./images/main/book_deco.png" alt="">
+                  <div class="music_note">
+                     <img src="" alt="">
+                     <img src="" alt="">
+                  </div>
+               </div>
+               <div class="element_2">
+                  <img class="book_deco" src="./images/main/tree_deco.png" alt="">
+                  <div class="music_note">
+                     <img src="" alt="">
+                     <img src="" alt="">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section> -->
+   <section id="sec2">
+      <div class="inner_contain">
+         <div class="img_wrap">
+            <img src="./images/main/people_of_spirit_img2.jpg" alt="">
+            <img src="./images/main/people_of_spirit_img3.jpg" alt="">
+            <img src="./images/main/people_of_spirit_img4.jpg" alt="">
+         </div>
+         <div class="txt_wrap ani-section">
+            <p class="main_copy ani-content">현장에서 지켜본 국경없는의사회는, 어려움에 놓인 ‘타인’을 기꺼이 도와 <br>세상의 균형을 이뤄내기 위해 헌신하는 사람들이었어요.</p>
+            <h2 class="ani-content">세상에서 가장 아름다운 존재로 보였습니다.</h2>
+            <p class="sub_copy ani-content">구호 활동가와 사무소 직원들의 헌신을 보고 <br> <strong> 진정한 삶의 의미란 베풀고 나누는 것</strong>임을 다시금 되새길 수 있었고, <br>환자들의 치유 과정에 함께하고자 음악이 가진 치유의 힘을 믿고 연주를 시작했습니다.</p>
+         </div>
+         <div class="deco_element_1">
+            <img class="car_deco" src="./images/main/car_deco.png" alt="">
+            <div class="music_note">
+               <img src="" alt="">
+               <img src="" alt="">
+            </div>
+         </div>
+         <div class="deco_element_2">
+            <img class="tree_deco" src="./images/main/music_paper_deco4.png" alt="">
+            <div class="music_note">
+               <img src="" alt="">
+               <img src="" alt="">
+            </div>
          </div>
       </div>
    </section>
-   <section id="sec2">
-      <div class="img_wrap">
-         <img src="./images/main/people_of_spirit_img2.jpg" alt="">
-         <img src="./images/main/people_of_spirit_img3.jpg" alt="">
-         <img src="./images/main/people_of_spirit_img4.jpg" alt="">
-      </div>
-      <div class="txt_wrap">
-         <p class="main_copy">현장에서 지켜본 국경없는의사회는, 어려움에 놓인 ‘타인’을 기꺼이 도와 <br>세상의 균형을 이뤄내기 위해 헌신하는 사람들이었어요.</p>
-         <h2>세상에서 가장 아름다운 존재로 보였습니다.</h2>
-         <p class="sub_copy">구호 활동가와 사무소 직원들의 헌신을 보고 <br> <strong> 진정한 삶의 의미란 베풀고 나누는 것</strong>임을 다시금 되새길 수 있었고, <br>환자들의 치유 과정에 함께하고자 음악이 가진 치유의 힘을 믿고 연주를 시작했습니다.</p>
-      </div>
-   </section>
    <section id="sec3">
-      <div class="video_wrap">
-         <iframe src="" frameborder="0"></iframe>
-      </div>
-      <div class="txt_wrap">
-         <h2>마치 아이들의 웃음과도 같은 순수하고 밝은 멜로디의 이 곡은</h2>
-         <p>
-            <strong> ‘아름다움과 감사함이 폭력에 대항해 승리를 거둔다’</strong> 는 메세지를 담고 있으며, <br>국경없는의사회를 위해 따스한 위로가 되고 희망이 가득찬 음악으로 헌정하고 싶었습니다.
-         </p>
-         <strong> 제 바람을 알았는지 모두들 좋아해주는 모습을 보니 <br> 더 정직하고 깊이있는 음악가가 되어야겠다는 <br> 사명감과 책임감을 갖게 되더군요. </strong>
+      <div class="inner_contain">
+         <div class="video_wrap">
+            <iframe src="https://www.youtube.com/embed/" autoplay="1" data-autoplay></iframe>
+            <div class="deco_wrap"> </div>
+         </div>
+         <div class="txt_wrap ani-section">
+            <h2 class="ani-content">마치 아이들의 웃음과도 같은 순수하고 밝은 멜로디의 이 곡은</h2>
+            <p class="ani-content"><strong>‘아름다움과 감사함이 폭력에 대항해 승리를 거둔다’</strong> 는 메세지를 담고 있으며, <br>국경없는의사회를 위해 따스한 위로가 되고 희망이 가득찬 음악으로 헌정하고 싶었습니다.</p>
+            <strong class="title_txt ani-content">제 바람을 알았는지 모두들 좋아해주는 모습을 보니 <br> 더 정직하고 깊이있는 음악가가 되어야겠다는 <br> 사명감과 책임감을 갖게 되더군요.</strong>
+         </div>
+         <div class="deco_element_1">
+            <img class="book_deco" src="./images/main/people_deco1.png" alt="">
+            <div class="music_note">
+               <img src="" alt="">
+               <img src="" alt="">
+            </div>
+         </div>
+         <div class="deco_element_2">
+            <img class="book_deco" src="./images/main/people_deco2.png" alt="">
+            <div class="music_note">
+               <img src="" alt="">
+               <img src="" alt="">
+            </div>
+         </div>
       </div>
    </section>
-   <section id="sec4">
+   <section id="sec4" class="ani-section">
       <div class="txt_wrap">
-         <h2>앞으로도 국경없는의사회와 함께 <br>세상을 밝히고, 희망을 나누겠습니다.</h2>
-         <p> 무력분쟁, 자연재해, 질병, 기아 등으로 고통받는 이들에게 차별없는 의료지원을 <br> 제공하는 국경없는의사회를 보니, 많은 사람들과 국경없는의사회의 활동을 공유하고 소통하는 것이 <br> 제 역할이자 소명이라는 생각을 더 굳건히 하게 되었습니다. </p>
+         <h2 class="ani-content">앞으로도 국경없는의사회와 함께 <br>세상을 밝히고, 희망을 나누겠습니다.</h2>
+         <p class="ani-content"> 무력분쟁, 자연재해, 질병, 기아 등으로 고통받는 이들에게 차별없는 의료지원을 <br> 제공하는 국경없는의사회를 보니, 많은 사람들과 국경없는의사회의 활동을 공유하고 소통하는 것이 <br> 제 역할이자 소명이라는 생각을 더 굳건히 하게 되었습니다. </p>
       </div>
-      <div class="btn_wrap">
+      <div class="btn_wrap ani-content">
          <button type="button" title="국경없는의사회 후원하기" class="donate_btn donate_utm_link">국경없는의사회 후원하기</button>
       </div>
    </section>

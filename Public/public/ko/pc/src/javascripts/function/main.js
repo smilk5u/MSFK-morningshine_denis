@@ -1,58 +1,91 @@
 function main() {
-   const container = document.querySelector('.container');
    const top = document.querySelector('.top');
-   const box1 = document.querySelector('.box');
-   const box2 = document.querySelector('.box2');
+   const intro_img_wrap = document.querySelector('.intro_img_wrap');
+   const aniContent = document.getElementsByClassName('ani-content');
+
+   const aniSection = $('.ani-section');
+
+   const intro = $('#intro'),
+      introDeco = intro.find('.intro_deco'),
+      introTitle = intro.find('h2'),
+      introCursiveTxt = intro.find('.cursive_txt'),
+      introInnerCont = intro.find('.inner_cont');
+
+   let offSetTop = [];
+   let SectionAniContent = [];
 
    window.addEventListener('scroll', function () {
       top.innerHTML = windowScrollTop;
    });
 
-   function sub1() {
-      const introTimeline = gsap.timeline({
-         scrollTrigger: {
-            trigger: '.sec1',
-            start: "top top",
-            // end: "+=10000", // 전체 스크롤 길이.
-            end: 400, // 전체 스크롤 길이.
-            pin: ".sec1",
-            scrub: 2,
-            pinSpacing: true,
-            markers: { startColor: "blue", endColor: "blue" },
+   aniSection.each(function () {
+      var _this = $(this);
+      offSetTop.push(_this.offset().top - window.innerHeight / 1.5);
+      SectionAniContent.push(_this);
+   });
+   window.addEventListener('scroll', SecAction);
+   function SecAction() {
+      for (var i = 0; i < aniSection.length; i++) {
+         if (windowScrollTop > offSetTop[i]) {
+            TweenMax.staggerTo(SectionAniContent[i].find('.ani-content'), .6, { opacity: 1, y: -50, }, .2);
+            SectionAniContent[i].addClass('end');
          }
-      });
+      } 
+   }
 
-      function introMotion1() {
-         const sec1ContainerTimeLine = gsap.timeline();
-         sec1ContainerTimeLine.to(box1, 2, { opacity: 0, y: -(window.innerHeight / 3) })
-         sec1ContainerTimeLine.to(box2, 1.8, { opacity: 1, display: 'block', scale: 1, delay: -.8 })
-         return sec1ContainerTimeLine;
+   /* intro Motion */
+   const introMotionTxt = gsap.timeline();
+   introMotionTxt.to(introDeco, 1, { opacity: 1, transform: 'translate3d(0,0,0)' })
+      .to(introTitle, 1, { opacity: 1, transform: 'translate3d(0,0,0)', delay: -.94 })
+      .to(introCursiveTxt, 1, { opacity: 1, transform: 'translate3d(0,0,0)', delay: -.92 })
+      .to(introInnerCont, 1, { opacity: 1, transform: 'translate3d(0,0,0)', delay: -.9 })
+      .to($('.intro_img_wrap'), .5, { opacity: 1, transform: 'translate3d(0,0,0)', delay: -.9 })
+
+
+   // gsap.to('body,html', .5, { scrollTo: 0 })
+   // $(window).scrollTop(0);
+   
+
+
+   /* 스크롤 트리거 */
+   const introTimeline = gsap.timeline({
+      scrollTrigger: {
+         trigger: '#intro .pin_contain',
+         start: "top top",
+         end: 1000, // 전체 스크롤 길이.
+         // pin: '#intro .pin_contain',
+         scrub: 2,
+         pinSpacing: true,
+         markers: { startColor: "blue", endColor: "blue" },
       }
-      introTimeline.add(introMotion1());
-
-      window.addEventListener('scroll', function () {
-         console.log(box2.getBoundingClientRect().width , 620, box2.getBoundingClientRect().width === 620)
-         if (box2.getBoundingClientRect().width === 620) {
-            console.log('맏다?')
-         } else {
-            console.log('아니다')
-         }
-      });
+   });
+   function introMotion1() {
+      const sec1ContainerTimeLine = gsap.timeline();
+      sec1ContainerTimeLine.to('#intro .title_content .txt_wrap', 2, { opacity: 0, y: -(window.innerHeight / 3) })
+      sec1ContainerTimeLine.to('.intro_img_wrap', 2, { opacity: 0, y: -(window.innerHeight / 3), delay: -1.8 })
+      sec1ContainerTimeLine.to('#intro .sub_content', 2, { opacity: 1, scale: 1 })
+      return sec1ContainerTimeLine;
    }
+   introTimeline.add(introMotion1());
 
-   function sub2() {
-      window.addEventListener('scroll', function () {
-         if (windowScrollTop > 50) {
-            gsap.to(box1, 1, { opacity: 0, y: -(window.innerHeight / 3) })
-            // gsap.to(box2, 1, { opacity: 1, display: 'block', scale: 1, delay: 1 })
-         } else {
-            gsap.to(box1, 1, { opacity: 1, y: 0 })
-            // gsap.to(box2, 1, { opacity: 0, display: 'none', scale: 0, delay: 1 })
-         }
-         console.log()
-      });
 
-   }
+   // window.addEventListener('scroll', function () {
+   //    if (windowScrollTop > 500) {
+   //       gsap.to('#intro .pin_contain .intro_img_wrap', 1, { opacity: 0, y: -200 })
+   //    } else {
+   //       gsap.to('#intro .pin_contain .intro_img_wrap', 1, { opacity: 1, y: 0 })
+   //    }
+   //    if (windowScrollTop > 700) {
+   //       gsap.to('#intro .sub_content', .8, { opacity: 1, scale: 1 })
+   //    } else{
+   //       gsap.to('#intro .sub_content', .8, { opacity: 0, scale: .8 })
+   //    }
+   // });
+
+   $(window).on('unload', function () {
+      $('body,html').scrollTop(0);
+   });
+
    // container.classList.contains('sub1') && sub1()
    // container.classList.contains('sub2') && sub2()
 

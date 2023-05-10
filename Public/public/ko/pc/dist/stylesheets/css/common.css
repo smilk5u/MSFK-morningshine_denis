@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* OmNiGothic */
 @font-face { font-family: "OmNiGothic"; font-style: normal; font-weight: 200; src: url(../../fonts/210Gothic020.woff) format("woff"); }
 
@@ -150,13 +151,13 @@ label, button { cursor: pointer; }
 
 header { width: 100%; position: fixed; z-index: 50; top: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
-header #logo { width: 208px; height: 64px; position: absolute; top: 28px; left: 30px; }
+header #logo { width: 208px; height: 64px; position: absolute; top: 30px; left: 80px; }
 
 header #logo a { width: 100%; height: 100%; display: block; position: relative; }
 
 header #logo img { width: 100%; position: absolute; top: 0; left: 0; }
 
-header .donate_btn { position: absolute; right: 40px; top: 33px; }
+header .donate_btn { position: absolute; right: 80px; top: 40px; }
 
 header .donate_btn a { width: 200px; padding: 19px 0 17px; font-size: 18px; color: #fff; display: block; line-height: 20px; letter-spacing: 0; font-weight: 200; background-color: #ef2d2d; text-align: center; border: 2px solid transparent; -webkit-border-radius: 50px; -moz-border-radius: 50px; border-radius: 50px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-transition: all 0.2s ease; -moz-transition: all 0.2s ease; -o-transition: all 0.2s ease; -ms-transition: all 0.2s ease; }
 
@@ -208,121 +209,125 @@ footer .footer_inner .bottom_txt .donate_btn { float: right; padding: 25px 0 0; 
 
 footer .footer_inner .bottom_txt .donate_btn a { width: 180px; padding: 14px 0 10px; font-size: 16px; color: #fff; display: block; line-height: 20px; font-weight: 300; background-color: #ef2d2d; text-align: center; border: 2px solid transparent; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
-.top { position: fixed; left: 0; bottom: 0; font-size: 20px; font-weight: bold; }
+.top { position: fixed; left: 0; bottom: 0; font-size: 20px; font-weight: bold; z-index: 99999; }
 
-.sub1 section { height: 100vh; padding: 200px 0 0; border-bottom: 1px solid black; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
-
-.sub1 .sec1 { width: 100%; }
-
-.sub1 .sec1 .box { width: 600px; height: 600px; background-color: pink; border: 10px solid black; position: absolute; left: 0; top: 0; bottom: 0; right: 0; margin: auto; }
-
-.sub1 .sec1 .box2 { width: 600px; height: 600px; background-color: #91d81e; border: 10px solid black; font-size: 100px; position: absolute; left: 0; top: 0; bottom: 0; right: 0; margin: auto; opacity: 0; display: none; -webkit-transform: scale(0); -moz-transform: scale(0); -ms-transform: scale(0); -o-transform: scale(0); transform: scale(0); }
-
-.sub1 .sec2 { width: 100%; height: 100vh; background-color: blue; }
-
-.sub2 section { height: 100vh; padding: 200px 0 0; border-bottom: 1px solid black; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
-
-.sub2 .sec1 { width: 100%; }
-
-.sub2 .sec1 .box { width: 600px; height: 600px; background-color: pink; border: 10px solid black; position: absolute; left: 0; top: 0; bottom: 0; right: 0; margin: auto; }
-
-.sub2 .sec1 .box2 { width: 600px; height: 600px; background-color: #91d81e; border: 10px solid black; font-size: 100px; position: absolute; left: 0; top: 0; bottom: 0; right: 0; margin: auto; opacity: 0; display: none; -webkit-transform: scale(0); -moz-transform: scale(0); -ms-transform: scale(0); -o-transform: scale(0); transform: scale(0); }
-
-.sub2 .sec2 { width: 100%; height: 100vh; background-color: blue; }
-
-main { min-width: 1400px; width: 100%; height: 100%; background: url(./../../images/main/bg_deco.jpg) 0 repeat; background-size: initial; }
+main { min-width: 1400px; width: 100%; height: 100%; background: url(./../../images/main/bg_deco.jpg) 0 repeat; background-size: initial; overflow: hidden; /* #intro { .first_motion { background: url(./../../images/main/cloud_bg.png) 50% 0 no-repeat;  // opacity: 0; .title_content { width: fit-content; position: relative; margin: 0 auto; padding: 130px 0 0; } .txt_wrap { text-align: center; h2 {  display: block;  img { margin: 20px 0 0; } } span.cursive_txt { display: block; padding: 20px 0 0; font-family: $HighSummit; font-size: 44px; color: #3a484c; line-height: 62px; } .inner_cont { width: fit-content; margin: 20px auto 0; padding: 17px 30px 13px; border-top: 1px solid #afbfb3; border-bottom: 1px solid #afbfb3; p { color: #3c4a4e; font-size: 28px; font-weight: $light; } } } .img_wrap {  position: relative; padding: 40px 0 0; z-index: 1; &:after { width: 1920px; height: 670px; content: ""; display: block; position: absolute; left: 50%; top: 50%; z-index: -1; background: url(./../../images/main/music_paper_deco.png) 50% 50% no-repeat; @include translate(-50%,-50%); } img { margin: 0 0 0 150px; } } } .second_motion { position: absolute; top: 1000px; left: 50%; overflow: hidden; opacity: 0; @include translate(-50%,0); .sub_content { width: fit-content; position: relative; margin: 0 auto; padding: 130px 0 140px; text-align: center; > p { color: $copyColor2; font-size: 30px; font-weight: $regular; line-height: 42px; } h2 { padding: 100px 0 0; font-size: 44px; font-weight: $regular; font-style: italic; letter-spacing: -2px; strong { font-weight: $regular; color: $green; } } .img_wrap {  position: relative; padding: 75px 0 0; z-index: 1; } .txt_wrap { position: relative; padding: 75px 0 0; z-index: 1; p.main_copy { font-size: 30px; line-height: 42px; color: $copyColor1; font-weight: $regular; strong { font-weight: $regular; color: $green; } } .sub_copy { padding: 25px 0 0; p { padding: 15px 0 0; font-size: 22px; line-height: 34px; font-weight: $light; &:first-child { padding:0; } } } } .deco_wrap { width: 1920px; height: 737px; position: absolute; left: 50%; top: 417px; background: url(./../../images/main/music_paper_deco2.png) 50% 50% no-repeat; @include translate(-50%,0);  .element_1 { width: 339px; height: 230px; position: absolute; left: -15px; top: 440px; .music_note { img {} } } .element_2 { width: 708px; height: 612px; position: absolute; right: -250px; top: 390px; .music_note { img {} } } } } } } */ }
 
 main section { width: 100%; }
 
-main #intro .first_motion { background: url(./../../images/main/cloud_bg.png) 50% 50% no-repeat; overflow: hidden; display: none; }
+main #intro { height: 2483px; background: url(./../../images/main/cloud_bg.png) 50% 0 no-repeat; }
 
-main #intro .first_motion .title_content { width: fit-content; position: relative; margin: 0 auto; padding: 130px 0 0; }
+main #intro .title_content { position: relative; margin: 0 auto; padding: 125px 0 0; }
 
-main #intro .first_motion .title_content:after { width: 100%; height: 100px; content: ""; display: block; position: absolute; top: 0; left: 0; background: url(./../../imgaes/main/music_paper_deco.png) 50% 50% no-repeat; }
+main #intro .title_content .txt_wrap { text-align: center; }
 
-main #intro .first_motion .txt_wrap { text-align: center; }
+main #intro .title_content .txt_wrap img.intro_deco { opacity: 0; -webkit-transform: translate(0, 60px); -moz-transform: translate(0, 60px); -ms-transform: translate(0, 60px); -o-transform: translate(0, 60px); transform: translate(0, 60px); }
 
-main #intro .first_motion .txt_wrap h2 { display: block; }
+main #intro .title_content .txt_wrap h2 { display: block; opacity: 0; -webkit-transform: translate(0, 60px); -moz-transform: translate(0, 60px); -ms-transform: translate(0, 60px); -o-transform: translate(0, 60px); transform: translate(0, 60px); }
 
-main #intro .first_motion .txt_wrap h2 img { margin: 20px 0 0; }
+main #intro .title_content .txt_wrap h2 span { position: absolute; text-indent: -999px; opacity: 0; }
 
-main #intro .first_motion .txt_wrap span.cursive_txt { display: block; padding: 20px 0 0; font-family: "HighSummit", Arial, Apple SD Gothic Neo, sans-serif; font-size: 44px; color: #3a484c; line-height: 62px; }
+main #intro .title_content .txt_wrap h2 img { margin: 20px 0 0; }
 
-main #intro .first_motion .txt_wrap .inner_cont { width: fit-content; margin: 20px auto 0; padding: 17px 30px 13px; border-top: 1px solid #afbfb3; border-bottom: 1px solid #afbfb3; }
+main #intro .title_content .txt_wrap span.cursive_txt { display: block; padding: 20px 0 0; font-family: "HighSummit", Arial, Apple SD Gothic Neo, sans-serif; font-size: 44px; color: #3a484c; line-height: 62px; opacity: 0; -webkit-transform: translate(0, 60px); -moz-transform: translate(0, 60px); -ms-transform: translate(0, 60px); -o-transform: translate(0, 60px); transform: translate(0, 60px); }
 
-main #intro .first_motion .txt_wrap .inner_cont p { color: #3c4a4e; font-size: 28px; font-weight: 200; }
+main #intro .title_content .txt_wrap .inner_cont { width: fit-content; margin: 20px auto 0; padding: 17px 30px 13px; border-top: 1px solid #afbfb3; border-bottom: 1px solid #afbfb3; opacity: 0; -webkit-transform: translate(0, 60px); -moz-transform: translate(0, 60px); -ms-transform: translate(0, 60px); -o-transform: translate(0, 60px); transform: translate(0, 60px); }
 
-main #intro .first_motion .img_wrap { position: relative; padding: 40px 0 0; z-index: 1; }
+main #intro .title_content .txt_wrap .inner_cont p { color: #3c4a4e; font-size: 28px; font-weight: 200; letter-spacing: 1.5px; }
 
-main #intro .first_motion .img_wrap:after { width: 1920px; height: 670px; content: ""; display: block; position: absolute; left: 50%; top: 50%; z-index: -1; background: url(./../../images/main/music_paper_deco.png) 50% 50% no-repeat; -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+main #intro .pin_contain { height: 100vh; position: relative; }
 
-main #intro .first_motion .img_wrap img { margin: 0 0 0 150px; }
+main #intro .pin_contain .intro_img_wrap { width: fit-content; position: relative; z-index: 1; margin: -60px auto 0; opacity: 0; -webkit-transform: translate(0, 30px); -moz-transform: translate(0, 30px); -ms-transform: translate(0, 30px); -o-transform: translate(0, 30px); transform: translate(0, 30px); }
 
-main #intro .secound_motion { overflow: hidden; }
+main #intro .pin_contain .intro_img_wrap:after { width: 1920px; height: 866px; content: ""; display: block; position: absolute; left: 50%; top: 50%; z-index: -1; background: url(./../../images/main/music_paper_deco.png) 50% 50% no-repeat; -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
 
-main #intro .secound_motion .sub_content { width: fit-content; position: relative; margin: 0 auto; padding: 130px 0 140px; text-align: center; }
+main #intro .pin_contain .intro_img_wrap img { margin: 0 0 0 150px; }
 
-main #intro .secound_motion .sub_content > p { color: #888b84; font-size: 30px; font-weight: 300; line-height: 42px; }
+main #intro .pin_contain .sub_content { width: fit-content; margin: 0 auto; padding: 130px 0 140px; text-align: center; top: 500px; opacity: 0; position: absolute; left: 50%; -webkit-transform: translate(-50%, 0) scale(0.8); -moz-transform: translate(-50%, 0) scale(0.8); -ms-transform: translate(-50%, 0) scale(0.8); -o-transform: translate(-50%, 0) scale(0.8); transform: translate(-50%, 0) scale(0.8); }
 
-main #intro .secound_motion .sub_content h2 { padding: 100px 0 0; font-size: 44px; font-weight: 300; font-style: italic; }
+main #intro .pin_contain .sub_content > p { color: #888b84; font-size: 30px; font-weight: 300; line-height: 42px; }
 
-main #intro .secound_motion .sub_content h2 strong { font-weight: 300; color: #3ca17e; }
+main #intro .pin_contain .sub_content h2 { padding: 100px 0 0; font-size: 44px; font-weight: 300; font-style: italic; letter-spacing: -2px; }
 
-main #intro .secound_motion .sub_content .img_wrap { position: relative; padding: 75px 0 0; z-index: 1; }
+main #intro .pin_contain .sub_content h2 strong { font-weight: 300; color: #3ca17e; }
 
-main #intro .secound_motion .sub_content .img_wrap:after { width: 1920px; height: 737px; content: ""; display: block; position: absolute; left: 50%; top: 50%; margin: 135px 0 0; z-index: -1; background: url(./../../images/main/music_paper_deco2.png) 50% 50% no-repeat; -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+main #intro .pin_contain .sub_content .img_wrap { position: relative; padding: 75px 0 0; z-index: 1; }
 
-main #intro .secound_motion .sub_content .txt_wrap { position: relative; padding: 75px 0 0; z-index: 1; }
+main #intro .pin_contain .sub_content .txt_wrap { position: relative; padding: 75px 0 0; z-index: 1; }
 
-main #intro .secound_motion .sub_content .txt_wrap:before { width: 414px; height: 302px; content: ""; display: block; position: absolute; left: 50%; top: 50%; margin: -230px 0 0 -781px; z-index: -1; background: url(./../../images/main/gitar_deco.png) 50% 50% no-repeat; -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+main #intro .pin_contain .sub_content .txt_wrap p.main_copy { font-size: 30px; line-height: 42px; color: #22201c; font-weight: 300; -webkit-transform: translate(0, 30px); -moz-transform: translate(0, 30px); -ms-transform: translate(0, 30px); -o-transform: translate(0, 30px); transform: translate(0, 30px); }
 
-main #intro .secound_motion .sub_content .txt_wrap:after { width: 708px; height: 612px; content: ""; display: block; position: absolute; left: 50%; top: 50%; margin: 0 0 0 821px; z-index: -1; background: url(./../../images/main/tree_deco.png) 50% 50% no-repeat; -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+main #intro .pin_contain .sub_content .txt_wrap p.main_copy strong { font-weight: 300; color: #3ca17e; }
 
-main #intro .secound_motion .sub_content .txt_wrap p.main_copy { font-size: 30px; line-height: 42px; color: #22201c; }
+main #intro .pin_contain .sub_content .txt_wrap .sub_copy { padding: 25px 0 0; -webkit-transform: translate(0, 30px); -moz-transform: translate(0, 30px); -ms-transform: translate(0, 30px); -o-transform: translate(0, 30px); transform: translate(0, 30px); }
 
-main #intro .secound_motion .sub_content .txt_wrap p.main_copy strong { font-weight: 300; color: #3ca17e; }
+main #intro .pin_contain .sub_content .txt_wrap .sub_copy p { padding: 15px 0 0; font-size: 22px; line-height: 34px; font-weight: 200; }
 
-main #intro .secound_motion .sub_content .txt_wrap .sub_copy { padding: 25px 0 0; }
+main #intro .pin_contain .sub_content .txt_wrap .sub_copy p:first-child { padding: 0; }
 
-main #intro .secound_motion .sub_content .txt_wrap .sub_copy p { padding: 15px 0 0; font-size: 22px; line-height: 34px; font-weight: 200; }
+main #intro .pin_contain .sub_content .deco_wrap { width: 1920px; height: 737px; position: absolute; left: 50%; top: 417px; background: url(./../../images/main/music_paper_deco2.png) 50% 50% no-repeat; -webkit-transform: translate(-50%, 0); -moz-transform: translate(-50%, 0); -ms-transform: translate(-50%, 0); -o-transform: translate(-50%, 0); transform: translate(-50%, 0); }
 
-main #intro .secound_motion .sub_content .txt_wrap .sub_copy p:first-child { padding: 0; }
+main #intro .pin_contain .sub_content .deco_wrap .element_1 { width: 339px; height: 230px; position: absolute; left: -15px; top: 440px; }
 
-main #sec2 { overflow: hidden; }
+main #intro .pin_contain .sub_content .deco_wrap .element_2 { width: 708px; height: 612px; position: absolute; right: -250px; top: 390px; }
 
-main #sec2 .img_wrap { width: fit-content; margin: 0 auto; position: relative; padding: 95px 0 0; z-index: 1; }
+main #intro .second_motion { position: absolute; top: 1000px; left: 50%; overflow: hidden; opacity: 0; -webkit-transform: translate(-50%, 0); -moz-transform: translate(-50%, 0); -ms-transform: translate(-50%, 0); -o-transform: translate(-50%, 0); transform: translate(-50%, 0); }
+
+main #sec2 .inner_contain { width: 1440px; position: relative; margin: 0 auto; }
+
+main #sec2 .img_wrap { width: fit-content; margin: 0 auto; padding: 95px 0 0; position: relative; z-index: 1; }
 
 main #sec2 .img_wrap img { display: block; float: left; margin: 0 0 0 20px; }
 
 main #sec2 .img_wrap img:first-of-type { margin: 0; }
 
-main #sec2 .txt_wrap { width: fit-content; position: relative; padding: 80px 0 160px; margin: 0 auto; text-align: center; }
+main #sec2 .txt_wrap { width: fit-content; padding: 80px 0 160px; margin: 0 auto; text-align: center; }
 
-main #sec2 .txt_wrap:before { width: 729px; height: 928px; position: absolute; top: 50%; left: 50%; content: ""; display: block; margin: -221px 0 0 -869px; -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%); background: url(./../../images/main/tree_deco2.png) 50% 50% no-repeat; }
+main #sec2 .txt_wrap p.main_copy { font-size: 22px; line-height: 34px; font-weight: #22201c; font-weight: 200; -webkit-transform: translate(0, 30px); -moz-transform: translate(0, 30px); -ms-transform: translate(0, 30px); -o-transform: translate(0, 30px); transform: translate(0, 30px); }
 
-main #sec2 .txt_wrap:after { width: 632px; height: 300px; position: absolute; top: 50%; left: 50%; content: ""; display: block; margin: -112px 0 0 653px; -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%); background: url(./../../images/main/music_paper_deco4.png) 50% 50% no-repeat; }
+main #sec2 .txt_wrap h2 { padding: 35px 0 0; font-size: 40px; line-height: 40px; font-weight: 300; color: #22201c; -webkit-transform: translate(0, 30px); -moz-transform: translate(0, 30px); -ms-transform: translate(0, 30px); -o-transform: translate(0, 30px); transform: translate(0, 30px); }
 
-main #sec2 .txt_wrap p.main_copy { font-size: 22px; line-height: 34px; font-weight: #22201c; font-weight: 200; }
-
-main #sec2 .txt_wrap h2 { padding: 35px 0 0; font-size: 40px; line-height: 40px; font-weight: 300; color: #22201c; }
-
-main #sec2 .txt_wrap p.sub_copy { padding: 35px 0 0; font-size: 22px; line-height: 34px; font-weight: #22201c; font-weight: 200; }
+main #sec2 .txt_wrap p.sub_copy { padding: 35px 0 0; font-size: 22px; line-height: 34px; font-weight: #22201c; font-weight: 200; -webkit-transform: translate(0, 30px); -moz-transform: translate(0, 30px); -ms-transform: translate(0, 30px); -o-transform: translate(0, 30px); transform: translate(0, 30px); }
 
 main #sec2 .txt_wrap p.sub_copy strong { font-weight: 300; color: #3ca17e; }
 
-main #sec3 .video_wrap { width: fit-content; margin: 0 auto; }
+main #sec2 .deco_element_1 { width: 729px; height: 958px; position: absolute; left: -530px; top: -105px; }
 
-main #sec3 .txt_wrap { width: fit-content; margin: 0 auto; }
+main #sec2 .deco_element_2 { width: 1056px; height: 875px; position: absolute; right: -605px; top: 285px; }
+
+main #sec3 .inner_contain { width: 1440px; position: relative; margin: 0 auto; }
+
+main #sec3 .video_wrap { width: 1030px; height: 580px; margin: 0 auto; padding: 80px 0 0; position: relative; z-index: 1; }
+
+main #sec3 .video_wrap iframe { width: 100%; height: 100%; background-color: #222; }
+
+main #sec3 .video_wrap:after { width: 1920px; height: 620px; content: ""; display: block; position: absolute; top: 0; left: 50%; background: url(./../../images/main/music_paper_deco3.png) 50% 50% no-repeat; z-index: -1; -webkit-transform: translate(-50%, 0); -moz-transform: translate(-50%, 0); -ms-transform: translate(-50%, 0); -o-transform: translate(-50%, 0); transform: translate(-50%, 0); }
+
+main #sec3 .txt_wrap { width: fit-content; margin: 0 auto; padding: 130px 0 140px; text-align: center; }
+
+main #sec3 .txt_wrap h2 { font-size: 30px; color: #22201c; font-weight: 300; -webkit-transform: translate(0, 30px); -moz-transform: translate(0, 30px); -ms-transform: translate(0, 30px); -o-transform: translate(0, 30px); transform: translate(0, 30px); }
+
+main #sec3 .txt_wrap p { padding: 25px 0 0; font-size: 22px; color: #22201c; font-weight: 200; line-height: 34px; -webkit-transform: translate(0, 30px); -moz-transform: translate(0, 30px); -ms-transform: translate(0, 30px); -o-transform: translate(0, 30px); transform: translate(0, 30px); }
+
+main #sec3 .txt_wrap p > strong { color: #3ca17e; font-weight: 300; }
+
+main #sec3 .txt_wrap strong.title_txt { position: relative; padding: 150px 0 0; display: block; color: #888b84; font-weight: 300; font-size: 30px; line-height: 44px; -webkit-transform: translate(0, 30px); -moz-transform: translate(0, 30px); -ms-transform: translate(0, 30px); -o-transform: translate(0, 30px); transform: translate(0, 30px); }
+
+main #sec3 .txt_wrap strong.title_txt:before { content: "“"; display: block; position: absolute; left: 50%; top: 120px; font-size: 70px; font-weight: 300; }
+
+main #sec3 .deco_element_1 { width: 616px; height: 935px; position: absolute; left: -241px; bottom: 0; }
+
+main #sec3 .deco_element_2 { width: 536px; height: 481px; position: absolute; right: -247px; bottom: 0; }
 
 main #sec4 { width: 100%; height: 1040px; background: url(./../../images/main/last_section_bg.jpg) 50% 50% no-repeat; }
 
 main #sec4 .txt_wrap { padding: 145px 0 0; text-align: center; }
 
-main #sec4 .txt_wrap h2 { font-size: 40px; line-height: 52px; color: #22201c; font-weight: 300; }
+main #sec4 .txt_wrap h2 { font-size: 40px; line-height: 52px; color: #22201c; font-weight: 300; -webkit-transform: translate(0, 30px); -moz-transform: translate(0, 30px); -ms-transform: translate(0, 30px); -o-transform: translate(0, 30px); transform: translate(0, 30px); }
 
-main #sec4 .txt_wrap p { padding: 40px 0 0; font-size: 22px; line-height: 34px; color: #22201c; font-weight: 200; }
+main #sec4 .txt_wrap p { padding: 40px 0 0; font-size: 22px; line-height: 34px; color: #22201c; font-weight: 200; -webkit-transform: translate(0, 30px); -moz-transform: translate(0, 30px); -ms-transform: translate(0, 30px); -o-transform: translate(0, 30px); transform: translate(0, 30px); }
 
-main #sec4 .btn_wrap { padding: 80px 0 0; }
+main #sec4 .btn_wrap { padding: 80px 0 0; -webkit-transform: translate(0, 30px); -moz-transform: translate(0, 30px); -ms-transform: translate(0, 30px); -o-transform: translate(0, 30px); transform: translate(0, 30px); }
 
 main #sec4 .btn_wrap .donate_btn { display: block; margin: 0 auto; padding: 25px 40px; background-color: #ef2d2d; color: #fff; font-size: 22px; font-weight: 200; -webkit-border-radius: 100px; -moz-border-radius: 100px; border-radius: 100px; }
 
