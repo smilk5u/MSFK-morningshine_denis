@@ -1,0 +1,317 @@
+@charset "UTF-8";
+.top { position: fixed; left: 0; bottom: 0; font-size: 20px; font-weight: bold; z-index: 99999; }
+.book_deco {
+
+}
+main {
+   min-width: 1400px; width: 100%; height: 100%; background: url(./../../images/main/bg_deco.jpg) 0 repeat;
+   background-size: initial; overflow: hidden;
+   section { width: 100%; }
+   #intro {
+      height: 2370px; background: url(./../../images/main/cloud_bg.png) 50% 0 no-repeat;
+      .title_content { 
+         position: relative; margin: 0 auto; padding: 125px 0 0; z-index: 2;
+         .txt_wrap {
+            text-align: center;
+            img.intro_deco { 
+               opacity: 0; 
+               @include translate(0,60px); 
+            }
+            h2 { 
+               display: block; opacity: 0;
+               span { position: absolute; text-indent: -999px; opacity: 0; }
+               img { margin: 20px 0 0; }
+               @include translate(0,60px); 
+            }
+            span.cursive_txt { 
+               display: block; padding: 20px 0 0; font-family: $HighSummit; font-size: 44px; color: #3a484c; 
+               line-height: 62px; opacity: 0;
+               @include translate(0,60px); 
+            }
+            .inner_cont {
+               width: fit-content; margin: 20px auto 0; padding: 20px 30px 13px; border-top: 1px solid #afbfb3;
+                border-bottom: 1px solid #afbfb3; opacity: 0;
+               @include translate(0,60px); 
+               p { color: #3c4a4e; font-size: 28px; font-weight: $light; letter-spacing: 1.5px; }
+            }
+         }
+      }
+      .pin_contain {
+         height: 100vh; position: relative;
+         .intro_img_wrap { 
+            width: fit-content; position: relative; z-index: 1; margin: -48px auto 0; opacity: 0;
+            @include translate(0,50px); 
+            &:after {
+               width: 1920px; height: 866px; content: ""; display: block; position: absolute; left: 50%; top: 50%;
+               z-index: -1; background: url(./../../images/main/music_paper_deco.png) 50% 50% no-repeat;
+               margin: -52px 0 0;
+               @include translate(-50%,-50%);
+            }
+            img { margin: 0 0 0 150px; }
+         }
+         .sub_content {
+            width: fit-content; margin: 0 auto; padding: 130px 0 140px; text-align: center;
+            top: 500px; opacity: 0;
+
+            position: absolute;
+            left: 50%;
+            @include transform(translate(-50%,0) scale(.8));
+
+            // position: relative;
+            // @include scale(.8);
+            > p { color: $copyColor2; font-size: 30px; font-weight: $regular; line-height: 42px; letter-spacing: -1.5px;  }
+            h2 {
+               padding: 100px 0 0; font-size: 44px; font-weight: $regular; font-style: italic; letter-spacing: -2.2px;
+               strong { font-weight: $regular; color: $green; }
+            }
+            .img_wrap { 
+               position: relative; padding: 75px 0 0; z-index: 1;
+            }
+            .txt_wrap {
+               position: relative; padding: 70px 0 0; z-index: 1;
+               p.main_copy {
+                  font-size: 30px; line-height: 42px; color: $copyColor1; font-weight: $regular; opacity: 0; letter-spacing: -1.5px;
+                  @include translate(0,50px); 
+                  strong { font-weight: $regular; color: $green; }
+               }
+               .sub_copy {
+                  padding: 25px 0 0; opacity: 0; 
+                  @include translate(0,50px); 
+                  p {
+                     padding: 15px 0 0; font-size: 22px; line-height: 34px; font-weight: $light; letter-spacing: -1px;
+                     &:first-child { padding:0; }
+                  }
+               }
+            }
+            .deco_wrap {
+               width: 1920px; height: 737px; position: absolute; left: 50%; top: 400px;
+               background: url(./../../images/main/music_paper_deco2.png) 50% 50% no-repeat;
+               @include translate(-50%,0); 
+               .element_1 {
+                  width: 339px; height: 230px; position: absolute; left: -15px; top: 440px;
+                  .music_note {
+                     position: absolute;
+                     &:nth-of-type(1) { top: -210px; left: 161px; }
+                     &:nth-of-type(2) { left: 392px; top: 92px; }
+                  }
+               }
+               .element_2 {
+                  width: 708px; height: 612px; position: absolute; right: -230px; top: 390px;
+                  .music_note {
+                     position: absolute;
+                     &:nth-of-type(1) { left: 0; top: -196px; }
+                     &:nth-of-type(2) { left: 330px; top: -253px; }
+                  }
+               }
+            }
+         }
+      }
+
+      .second_motion {
+         position: absolute; top: 1000px; left: 50%; overflow: hidden; opacity: 0;
+         @include translate(-50%,0);
+      }
+   }
+   /* #intro {
+      .first_motion {
+         background: url(./../../images/main/cloud_bg.png) 50% 0 no-repeat; 
+         // opacity: 0;
+         .title_content { width: fit-content; position: relative; margin: 0 auto; padding: 130px 0 0; }
+         .txt_wrap {
+            text-align: center;
+            h2 { 
+               display: block; 
+               img { margin: 20px 0 0; }
+            }
+            span.cursive_txt { display: block; padding: 20px 0 0; font-family: $HighSummit; font-size: 44px; color: #3a484c; line-height: 62px; }
+            .inner_cont {
+               width: fit-content; margin: 20px auto 0; padding: 17px 30px 13px;
+               border-top: 1px solid #afbfb3; border-bottom: 1px solid #afbfb3;
+               p { color: #3c4a4e; font-size: 28px; font-weight: $light; }
+            }
+         }
+         .img_wrap { 
+            position: relative; padding: 40px 0 0; z-index: 1;
+            &:after {
+               width: 1920px; height: 670px; content: ""; display: block; position: absolute; left: 50%; top: 50%;
+               z-index: -1; background: url(./../../images/main/music_paper_deco.png) 50% 50% no-repeat;
+               @include translate(-50%,-50%);
+            }
+            img { margin: 0 0 0 150px; }
+         }
+      }
+      .second_motion {
+         position: absolute; top: 1000px; left: 50%; overflow: hidden; opacity: 0;
+         @include translate(-50%,0);
+         .sub_content {
+            width: fit-content; position: relative; margin: 0 auto; padding: 130px 0 140px; text-align: center;
+            > p { color: $copyColor2; font-size: 30px; font-weight: $regular; line-height: 42px; }
+            h2 {
+               padding: 100px 0 0; font-size: 44px; font-weight: $regular; font-style: italic; letter-spacing: -2px;
+               strong { font-weight: $regular; color: $green; }
+            }
+            .img_wrap { 
+               position: relative; padding: 75px 0 0; z-index: 1;
+            }
+            .txt_wrap {
+               position: relative; padding: 75px 0 0; z-index: 1;
+               p.main_copy {
+                  font-size: 30px; line-height: 42px; color: $copyColor1; font-weight: $regular;
+                  strong { font-weight: $regular; color: $green; }
+               }
+               .sub_copy {
+                  padding: 25px 0 0;
+                  p {
+                     padding: 15px 0 0; font-size: 22px; line-height: 34px; font-weight: $light;
+                     &:first-child { padding:0; }
+                  }
+               }
+            }
+            .deco_wrap {
+               width: 1920px; height: 737px; position: absolute; left: 50%; top: 417px;
+               background: url(./../../images/main/music_paper_deco2.png) 50% 50% no-repeat;
+               @include translate(-50%,0); 
+               .element_1 {
+                  width: 339px; height: 230px; position: absolute; left: -15px; top: 440px;
+                  .music_note {
+                     img {}
+                  }
+               }
+               .element_2 {
+                  width: 708px; height: 612px; position: absolute; right: -250px; top: 390px;
+                  .music_note {
+                     img {}
+                  }
+               }
+            }
+         }
+      }
+   } */
+   #sec2 {
+      .inner_contain { width: 1440px; position: relative; margin: 0 auto; }
+      .img_wrap { 
+         width: fit-content; margin: 0 auto; padding: 95px 0 0; position: relative; z-index: 1; 
+         @extend %clearfix;
+         img {
+            display: block; float: left; margin: 0 0 0 20px;
+            &:first-of-type { margin: 0; }
+         }
+      }
+      .txt_wrap { 
+         width: fit-content; padding: 75px 0 160px; margin: 0 auto; text-align: center; 
+         p.main_copy { 
+            font-size: 22px; line-height: 34px; font-weight: $copyColor1; font-weight: $light; opacity: 0;
+            letter-spacing: -1px;
+            @include translate(0,50px); 
+         }
+         h2 { 
+            padding: 30px 0 0; font-size: 40px; line-height: 40px; font-weight: $regular; color: $copyColor1; opacity: 0;
+            letter-spacing: -2px;
+            @include translate(0,50px); 
+         }
+         p.sub_copy { 
+            padding: 30px 0 0; font-size: 22px; line-height: 34px; font-weight: $copyColor1; font-weight: $light;opacity: 0;
+            letter-spacing: -1px;
+            @include translate(0,50px); 
+            strong { font-weight: $regular; color:$green; }
+         }
+      }
+      .deco_element_1 {
+         width: 729px; height: 958px; position: absolute; left: -526px; top: -96px;
+         .music_note {
+            position: absolute;
+            &:nth-of-type(1) { right: 260px; top: 275px; }
+         }
+      }
+      .deco_element_2 {
+         width: 1056px; height: 875px; position: absolute; right: -633px; top: 332px;
+         .music_note {
+            position: absolute;
+            &:nth-of-type(1) { left: 322px; top: 178px; }
+            &:nth-of-type(2) { left: 483px; top: 343px; }
+         }
+      }
+   }
+   #sec3 {
+      position: relative; z-index: 1;
+      &:after {
+         width: 1920px; height: 191px; content: ""; display: block; position: absolute; bottom: 0; left: 50%; z-index: -1;
+         background: url(./../../images/main/shadow_deco.png) 50% 0 no-repeat; background-size: contain;
+         @include translate(-50%,0); z-index: -1;
+      }
+      .inner_contain { width: 1440px; position: relative; margin: 0 auto; }
+      .video_wrap { 
+         width: 1030px; height: 580px; margin: 0 auto; padding: 80px 0 0; position: relative; z-index: 1;
+         iframe { width: 100%; height: 100%; background-color: #222; }
+         .music_note_wrap {
+            width: 1920px; height: 620px; content: ""; display: block; position: absolute; top: 20px; left: 50%;
+            background: url(./../../images/main/music_paper_deco3.png) 50% 50% no-repeat; z-index: -1;
+            @include translate(-50%,0);
+            .music_note {
+               position: absolute;
+               &:nth-of-type(1) { left: 65px; top: 165px; }
+               &:nth-of-type(2) { left: 226px; top: 170px; }
+               &:nth-of-type(3) { right: 228px; top: 386px; }
+            }
+         }
+      }
+      .txt_wrap {
+         width: fit-content; margin: 0 auto; padding: 130px 0 135px; text-align: center;
+         h2 { 
+            font-size: 30px; color:$copyColor1; font-weight: $regular; opacity: 0; 
+            @include translate(0,50px); 
+         }
+         p {
+            padding: 25px 0 0 ; font-size: 22px; color: $copyColor1; font-weight: $light; line-height: 34px; opacity: 0;
+            @include translate(0,50px); 
+            > strong { color: $green; font-weight: $regular; }
+         }
+         strong.title_txt {
+            position: relative; padding: 150px 0 0; display: block; color: #888b84; font-weight: $regular; font-size: 30px; line-height: 44px; opacity: 0;
+            @include translate(0,50px); 
+            &:before { content: "“"; display: block; position: absolute; left: 50%; top: 120px; font-size: 70px; font-weight: $regular; }
+         }
+      }
+      .deco_element_1 { width: 616px; height: 935px; position: absolute; left: -241px; bottom: 0; }
+      .deco_element_2 { width: 536px; height: 481px; position: absolute; right: -247px; bottom: 0; }
+   }
+   #sec4 {
+      width: 100%; height: 1040px;
+      background: url(./../../images/main/last_section_bg.jpg) 50% 50% no-repeat;
+      .txt_wrap {
+         padding: 140px 0 0; text-align: center;
+         h2 {  
+            font-size: 40px; line-height: 52px; color: $copyColor1; font-weight: $regular; opacity: 0; letter-spacing: -2px;
+            @include translate(0,50px); 
+         }
+         p { 
+            padding: 35px 0 0; font-size: 22px; line-height: 34px; color: $copyColor1; font-weight: $light; opacity: 0; letter-spacing: -1px;
+            @include translate(0,50px);
+         }
+      }
+      .btn_wrap {
+         padding: 70px 0 0; opacity: 0;
+         @include translate(0,50px); 
+         .donate_btn {
+            width: fit-content; display: block; margin: 0 auto; padding: 32px 69px 26px; background-color: $red; 
+            color: $white; font-size: 24px; font-weight: $regular;
+            border: 2px solid transparent;
+            @include borderRadius(100px);
+            @include boxSizing;
+            @include transition(all, .2s);
+            &:hover { color: $red; background-color: rgba(255,255,255,.6); border-color: $red; }
+         }
+         // .donate_btn {
+         //    position: absolute; right: 80px; top: 40px;
+         //    a {
+         //       width: 200px; padding: 19px 0 17px; font-size: 18px; color: $white; display: block; line-height: 20px;  letter-spacing: 0;
+         //       font-weight: $light; background-color: $red; text-align: center; border: 2px solid transparent;
+         //       @include borderRadius(50px);
+         //       @include boxSizing;
+         //       @include transition(all, .2s);
+         //        &:hover { color: $red; background-color: rgba(255,255,255,.6); border-color: $red; }
+         //    }
+         // }
+      }
+   }
+}
