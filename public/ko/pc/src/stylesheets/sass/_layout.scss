@@ -1,0 +1,85 @@
+@charset "UTF-8";
+// header
+.box2 {
+	width:600px; height:500px; background-color: red;
+	position: absolute; top: 50%; left:50%;
+	@include translate(-50%,-50%);
+}
+header {
+	width:100%; position:fixed; z-index:50; top:0;
+	@include boxSizing;
+	@extend %clearfix;
+	#logo {
+		width: 208px; height: 64px; position: absolute; top: 30px; left: 50px;
+		a { width: 100%; height: 100%; display: block; position: relative; }
+		img { width: 100%; position: absolute; top: 0; left: 0; }
+	}
+	.donate_btn {
+		position: absolute; right: 50px; top: 40px;
+		a {
+			width: 200px; padding: 19px 0 17px; font-size: 18px; color: $white; display: block; line-height: 20px;  letter-spacing: 0;
+			font-weight: $light; background-color: $red; text-align: center; border: 2px solid transparent;
+			@include borderRadius(50px);
+			@include boxSizing;
+			@include transition(all, .2s);
+		 	&:hover { color: $red; background-color: rgba(255,255,255,.6); border-color: $red; }
+		}
+	}
+}
+// footer
+footer {
+	width:100%; min-width: 1240px; background-color:#181b2e; letter-spacing:normal; font-style:normal; 
+	.inner_cont {
+		width: 1240px; margin: 0 auto;
+	  .info_wrap_top {
+			border-bottom:1px solid rgba(255, 255, 255, 0.1);			
+			@extend %clearfix;
+			.logo_footer {
+			  width:140px; float:left; padding:20px 0 0; margin:0 45px 0 0; text-align:left;
+			  a { display:block; }
+			  img { width:100%; }
+			}
+			ul.footer_menu {
+			  float:left; padding:35px 0 31px;
+			  li {
+				 height:100%; display:inline-block; padding:0 15px; color:#c5c5c5;
+				 a:hover { border-bottom:2px solid #ed1c24; }
+				 a:link, a:visited { padding:0 0 10px; font-size:14px; font-weight:$regular; color:#e8e8e8; }
+			  }
+			} 
+			.donate_info {
+			  height:100%; float:right;
+			  @extend %clearfix;
+			  dl {
+				 float:left; padding:32px 0 10px 16px;
+				 &:first-child { padding-right:18px; }
+				 &.account {
+					position:relative;
+					&:after { width:1px; height:11px; content:""; display:block; position:absolute; left:0; top:39px; background-color:#474b4e; }
+				 }
+				 dt { display:inline-block;  font-size:14px; color:#ffe043; margin-right:10px; }
+				 dd { display:inline-block;  font-size:14px; color:#fff; }
+			  }
+			}
+	  }
+	  .info_wrap_bottom {
+			@extend %clearfix;
+			address {
+				height:100%; float:left; padding:40px 0; font-size:13px; color:#90929b;
+				span {
+				margin:0 0 0 13px; font-weight:$regular;
+				&:first-child { margin:0; }
+				}
+			}
+			.donate_btn {
+				float:right; padding:25px 0 0;
+				a {
+					width: 180px; padding: 15px 0 9px; font-size: 16px; color: $white; display: block; line-height: 20px;
+					font-weight: $regular; background-color: $red; text-align: center; border: 2px solid transparent;
+					@include borderRadius(100px);
+					@include boxSizing;
+				}
+			}
+	  }
+	}
+}

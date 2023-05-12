@@ -1,0 +1,286 @@
+@charset "UTF-8";
+.top { position: fixed; left: 0; bottom: 0; font-size: 20px; font-weight: bold; z-index: 99999; }
+.box {
+   width: 500px; height: 200px; background-color: red;
+   margin: 0 auto;
+   border:10px solid black;
+}
+main {
+   width: 100%; min-width: 1240px; background: url(./../../images/main/bg_deco.jpg) 0 repeat;
+   background-size: initial; overflow: hidden;
+   section { width: 100%; }
+   #intro {
+      min-width: 1240px; height: 2839px; position: relative; z-index: 1; margin: 0 auto; overflow: hidden;
+      &:after { 
+         width: 2560px; min-width: 1240px; height: 1472px; position: absolute; display: block; top: 0; z-index: -1;
+         left: 50%; content: ""; background: url(./../../images/main/cloud_bg.png) 50% 50% no-repeat; background-size: cover;
+         @include translate(-50%,0);
+      }
+      .title_content { 
+         width: fit-content; position: relative; margin: 0 auto; padding: 125px 0 0; z-index: 2;
+         .txt_wrap {
+            text-align: center;
+            img.intro_deco { 
+               opacity: 0; 
+               @include translate(0,60px); 
+            }
+            h2 { 
+               display: block; opacity: 0;
+               span { position: absolute; text-indent: -999px; opacity: 0; }
+               img { margin: 20px 0 0; }
+               @include translate(0,60px); 
+            }
+            span.cursive_txt { 
+               display: block; padding: 20px 0 0; font-family: $HighSummit; font-size: 44px; color: #3a484c; 
+               line-height: 62px; opacity: 0;
+               @include translate(0,60px); 
+            }
+            .inner_cont {
+               width: fit-content; margin: 20px auto 0; padding: 20px 30px 13px; border-top: 1px solid #afbfb3;
+                border-bottom: 1px solid #afbfb3; opacity: 0;
+               @include translate(0,60px); 
+               p { color: #3c4a4e; font-size: 28px; font-weight: $light; letter-spacing: 1.5px; }
+            }
+         }
+      }
+      .pin_contain {
+         height: 100vh; position: relative; 
+         .intro_img_wrap {
+            width: 1240px; height: 915px; margin: 0 auto; position: relative; z-index: 1; margin: 0 auto; opacity: 0;
+            @include translate(0,50px);
+            &:after {
+               width: 2560px; height: 670px; content: ""; display: block; position: absolute; left: 50%; top: 50%;
+               z-index: -1; background: url(./../../images/main/music_paper_deco.png) 50% 50% no-repeat; margin: -136px 0 0;
+               @include translate(-50%,-50%);
+            }
+            img { 
+               margin: -45px 0 0 100px;  
+               position: absolute; left:50%;
+               @include translate(-50%,0);
+            }
+            .music_note {
+               position: absolute; opacity: 0;
+               @include translate(0, 50px);
+               &:nth-of-type(1) { left: -242px; top: -28px; }
+               &:nth-of-type(2) { left: 173px; top: 229px; }
+               &:nth-of-type(3) { left: -286px; top: 461px; }
+               &:nth-of-type(4) { left: 950px; top: 158px; }
+               &:nth-of-type(5) { left: 1350px; bottom: 372px; }
+               &:nth-of-type(6) { left: 1140px; bottom: 106px; }
+            }
+            .logo_deco {
+               position: absolute; opacity: 0;
+               @include translate(0, 50px);
+               &:nth-of-type(1) { left: -144px; bottom: 151px; }
+               &:nth-of-type(2) { left: 1300px; top: 133px; }
+               &:nth-of-type(3) { left: -192px; top: 253px; }
+               &:nth-of-type(4) { left: 1326px; bottom: 0; }
+            }
+         }
+         .sub_content {
+            width: fit-content; position: absolute; top: 0; left: 50%; margin: 0 auto; padding: 80px 0 140px; text-align: center;
+            // opacity: 0;
+            @include transform(translate(-50%,0));
+            .title_wrap {
+               position: relative; z-index: 1; opacity: 0;
+               @include scale(.8);
+               > p { color: $copyColor2; font-size: 30px; font-weight: $regular; line-height: 42px; letter-spacing: -1.5px;  }
+               h2 {
+                  padding: 100px 0 0; font-size: 44px; font-weight: $regular; font-style: italic; letter-spacing: -2.2px;
+                  strong { font-weight: $regular; color: $green; }
+               }
+            }
+            .img_wrap { position: relative; padding: 75px 0 0; z-index: 1; }
+            .txt_wrap {
+               position: relative; padding: 75px 0 0; z-index: 1; opacity: 0;
+               @include scale(.8);
+               p.main_copy {
+                  font-size: 30px; line-height: 42px; color: $copyColor1; font-weight: $regular; opacity: 0; letter-spacing: -1.5px;
+                  strong { font-weight: $regular; color: $green; }
+               }
+               .sub_copy {
+                  padding: 20px 0 0;
+                  p {
+                     padding: 15px 0 0; font-size: 22px; line-height: 34px; font-weight: $light; letter-spacing: -1px;
+                     &:first-child { padding:0; }
+                     i { font-style: italic; display: inline-block; margin: 0 3px 0 0; }
+                  }
+               }
+            }
+            .deco_wrap {
+               width: 2533px; height: 854px; position: absolute; left: 50%; top: 260px;
+               background: url(./../../images/main/music_paper_deco2.png) 50% 50% no-repeat;
+               opacity: 0;
+               @include translate(-50%,0); 
+               .element_1 {
+                  width: 339px; height: 230px; position: absolute; left: 440px; top: 542px;
+                  .music_note {
+                     position: absolute;
+                     &:nth-of-type(1) { top: -210px; left: -7px; }
+                     &:nth-of-type(2) { left: 225px; top: -105px; }
+                  }  
+               }
+               .element_2 {
+                  width: 708px; height: 612px; position: absolute; right: 78px; top: 460px;
+                  .music_note {
+                     position: absolute;
+                     &:nth-of-type(1) { left: 0; top: -170px; }
+                     &:nth-of-type(2) { left: 300px; top: -210px; }
+                  }
+               }
+            }
+         }
+      }
+      .second_motion {
+         position: absolute; top: 1000px; left: 50%; overflow: hidden; opacity: 0;
+         @include translate(-50%,0);
+      }
+   } 
+   #music {
+      min-width: 1240px; position: relative; z-index: 1; margin: 0 auto;
+      .inner_contain { width: 1240px; position: relative; margin:0 auto; }
+      .img_wrap { 
+         width: fit-content; margin: 0 auto; padding: 95px 0 0; position: relative; z-index: 1; 
+         &:after,&:before { content: ""; display: block; position: absolute; z-index: -1; background-size: cover; }
+         &:before {
+            width: 766px; height: 270px; left: -718px; top: 78px;
+            background: url(./../../images/main/music_paper_deco6.png) 0 0 no-repeat;
+         }
+         &:after {
+            width: 952px; height: 390px; right: -629px; top: 329px;
+            background: url(./../../images/main/music_paper_deco7.png) 0 0 no-repeat;
+         }
+         .cover_img {
+            @extend %clearfix;
+            img {
+               display: block; float: left; margin: 0 0 0 20px;
+               &:first-of-type { margin: 0; }
+            }
+         }
+      }
+      .txt_wrap { 
+         width: fit-content; padding: 75px 0 160px; margin: 0 auto; text-align: center; 
+         p.main_copy { 
+            font-size: 22px; line-height: 34px; color: $copyColor1; font-weight: $light; opacity: 0;
+            letter-spacing: -1px;
+            @include translate(0,50px);  
+         }
+         h2 { 
+            padding: 30px 0 0; font-size: 40px; line-height: 40px; font-weight: $regular; color: $copyColor1; opacity: 0;
+            letter-spacing: -2px;
+            @include translate(0,50px); 
+         }
+         p.sub_copy { 
+            padding: 30px 0 0; font-size: 22px; line-height: 34px; font-weight: $copyColor1; font-weight: $light;opacity: 0;
+            letter-spacing: -1px;
+            @include translate(0,50px); 
+            strong { font-weight: $regular; color:$green; }
+         }
+      }
+      .deco_covering {
+         width: 100%; max-width: 2560px; height: 845px; position: absolute; left: 50%;
+         @include translate(-50%,0);
+         &.covering_1 {
+            min-width: 2502px; top: 50px;
+            .element { width: 630px; height: 577px; left:0; }
+         }
+         &.covering_2 {
+            min-width: 2240px; top: 360px;
+            .element { width: 632px; height: 446px; right: 0; }
+         }
+         .element { position: absolute;bottom: 0; }
+      }
+   }
+   #video {
+      min-width: 1240px; position: relative; z-index: 1; margin: 0 auto; overflow: hidden;
+      &:after {
+         width: 2560px; height: 191px; content: ""; display: block; position: absolute; bottom: 0; left: 50%; z-index: -1;
+         background: url(./../../images/main/shadow_deco.png) 50% 0 no-repeat; background-size: contain;
+         @include translate(-50%,0); z-index: -1;
+      }
+      .inner_contain { width: 1240px; margin: 0 auto; }
+      .video_wrap { 
+         width: 1030px; height: 580px; margin: 0 auto; padding: 80px 0 0; position: relative; z-index: 1;
+         iframe { width: 100%; height: 100%; }
+         .music_note_wrap {
+            width: 2560px; height: 667px; content: ""; display: block; position: absolute; top: -20px; left: 50%;
+            background: url(./../../images/main/music_paper_deco3.png) 50% 50% no-repeat; z-index: -1;
+            @include translate(-50%,0);
+            .music_note {
+               position: absolute;
+               &:nth-of-type(1) { left: 387px; top: 217px; }
+               &:nth-of-type(2) { left: 562px; top: 224px; }
+               &:nth-of-type(3) { right: 544px; top: 437px; }
+            }
+         }
+      }
+      .txt_wrap {
+         width: fit-content; position: relative; margin: 0 auto; padding: 130px 0 135px; text-align: center;
+         &:after {
+            width: 799px; height: 624px; position: absolute; bottom: 273px; left: -865px; content: ""; display: block;
+            background: url(./../../images/main/tree_deco1.png) 0 0 no-repeat; background-size: cover;
+         }
+         h2 { 
+            font-size: 30px; color:$copyColor1; font-weight: $regular; opacity: 0; letter-spacing: -2px;
+            @include translate(0,50px); 
+         }
+         p {
+            padding: 25px 0 0 ; font-size: 22px; color: $copyColor1; font-weight: $light; line-height: 34px; opacity: 0; letter-spacing: -1px;
+            @include translate(0,50px); 
+            > strong { color: $green; font-weight: $regular; }
+         }
+         strong.title_txt {
+            position: relative; padding: 140px 0 0; display: block; color: #888b84; font-weight: $regular; font-size: 30px; line-height: 44px; opacity: 0;
+            letter-spacing: -1.5px;
+            @include translate(0,50px); 
+            &:before { content: "“"; display: block; position: absolute; left: 50%; top: 115px; font-size: 70px; font-weight: $regular; margin: 0 0 0 -10px; color: #b0b3ac; }
+         }
+      }
+      .deco_covering {
+         width: 100%; max-width: 2560px; height: 845px; position: absolute; left: 50%; top: 472px;
+         @include translate(-50%,0);
+         &.covering_1 {
+            min-width: 2235px; 
+            .element { width: 884px; height: 411px; left:0; }
+         }
+         &.covering_2 {
+            min-width: 1580px; 
+            .element { width: 536px; height: 481px; right: 0; }
+         }
+         .element { position: absolute;bottom: 0; }
+      }
+   }
+   #hope {
+      min-width: 1240px; position: relative; z-index: 1; margin: 0 auto; padding: 0 0 503px; overflow: hidden;
+      &:after { 
+         width: 2560px; min-width: 1240px; height: 1040px; position: absolute; display: block; top: 0; z-index: -1;
+         left: 50%; content: ""; background: url(./../../images/main/last_section_bg.jpg) 50% 50% no-repeat; background-size: cover;
+         @include translate(-50%,0);
+      }
+      .inner_contain { width: 1240px; margin: 0 auto; }
+      .txt_wrap {
+         padding: 140px 0 0; text-align: center;
+         h2 {  
+            font-size: 40px; line-height: 52px; color: $copyColor1; font-weight: $regular; opacity: 0; letter-spacing: -2px;
+            @include translate(0,50px); 
+         }
+         p { 
+            padding: 35px 0 0; font-size: 22px; line-height: 34px; color: $copyColor1; font-weight: $light; opacity: 0; letter-spacing: -1px;
+            @include translate(0,50px);
+         }
+      }
+      .btn_wrap {
+         padding: 70px 0 0; opacity: 0;
+         @include translate(0,50px); 
+         .donate_btn {
+            width: fit-content; display: block; margin: 0 auto; padding: 32px 69px 26px; background-color: $red; 
+            color: $white; font-size: 24px; font-weight: $regular;
+            border: 2px solid transparent;
+            @include borderRadius(100px);
+            @include boxSizing;
+            @include transition(all, .2s);
+            &:hover { color: $red; background-color: rgba(255,255,255,.6); border-color: $red; }
+         }
+      }
+   }
+}
